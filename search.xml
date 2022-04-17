@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>techblog</category>
+      </categories>
+      <tags>
+        <tag>helloworld</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1. Two Sum</title>
+    <url>/leetcode/1-two-sum/</url>
+    <content><![CDATA[<h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h4><p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.  </p>
+<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the same element twice.  </p>
+<p>You can return the answer in any order.  </p>
+<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Input: nums = [2,7,11,15], target = 9</span><br><span class="line">Output: [0,1]</span><br><span class="line">Output: Because nums[0] + nums[1] == 9, we return [0, 1].</span><br></pre></td></tr></table></figure>
+
+<h4 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h4><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; hash;</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;nums.<span class="built_in">size</span>(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> fn = target - nums[i];</span><br><span class="line">            <span class="keyword">if</span> ( hash.<span class="built_in">find</span>(fn) != hash.<span class="built_in">end</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                ans.<span class="built_in">push_back</span>(i);</span><br><span class="line">                ans.<span class="built_in">push_back</span>(hash[fn]);</span><br><span class="line">                <span class="keyword">return</span> ans;</span><br><span class="line">            &#125;</span><br><span class="line">            hash[nums[i]] = i;   </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>Time: <code>O(n)</code><br>Space: <code>O(n)</code></p>
+]]></content>
+      <categories>
+        <category>leetcode</category>
+      </categories>
+      <tags>
+        <tag>lc-easy</tag>
+        <tag>array</tag>
+        <tag>hash map</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Common Command</title>
+    <url>/techblog/hexo-common-command/</url>
+    <content><![CDATA[<h3 id="Build-a-blog"><a href="#Build-a-blog" class="headerlink" title="Build a blog"></a>Build a blog</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br></pre></td></tr></table></figure>
+
+<h3 id="Preview-a-blog"><a href="#Preview-a-blog" class="headerlink" title="Preview a blog"></a>Preview a blog</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h3 id="Publish-a-blog"><a href="#Publish-a-blog" class="headerlink" title="Publish a blog"></a>Publish a blog</h3>]]></content>
+      <categories>
+        <category>techblog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
