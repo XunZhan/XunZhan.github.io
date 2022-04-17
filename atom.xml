@@ -3,11 +3,11 @@
   <title>Xun</title>
   
   <subtitle>得时无怠，功不唐捐。</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://xunzhan.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://xunzhan.github.io/"/>
   <updated>2022-04-15T07:19:15.320Z</updated>
-  <id>http://example.com/</id>
+  <id>https://xunzhan.github.io/</id>
   
   <author>
     <name>Xun</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/hello-world/"/>
-    <id>http://example.com/hello-world/</id>
+    <link href="https://xunzhan.github.io/hello-world/"/>
+    <id>https://xunzhan.github.io/hello-world/</id>
     <published>2022-04-12T05:18:33.000Z</published>
     <updated>2022-04-15T07:19:15.320Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="techblog" scheme="http://example.com/categories/techblog/"/>
+    <category term="techblog" scheme="https://xunzhan.github.io/categories/techblog/"/>
     
     
-    <category term="helloworld" scheme="http://example.com/tags/helloworld/"/>
+    <category term="helloworld" scheme="https://xunzhan.github.io/tags/helloworld/"/>
     
   </entry>
   
   <entry>
     <title>Hexo Common Command</title>
-    <link href="http://example.com/techblog/hexo-common-command/"/>
-    <id>http://example.com/techblog/hexo-common-command/</id>
+    <link href="https://xunzhan.github.io/techblog/hexo-common-command/"/>
+    <id>https://xunzhan.github.io/techblog/hexo-common-command/</id>
     <published>2022-04-12T05:18:33.000Z</published>
     <updated>2022-04-12T06:34:13.192Z</updated>
     
@@ -59,17 +59,17 @@
     
     
     
-    <category term="techblog" scheme="http://example.com/categories/techblog/"/>
+    <category term="techblog" scheme="https://xunzhan.github.io/categories/techblog/"/>
     
     
-    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://xunzhan.github.io/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>1. Two Sum</title>
-    <link href="http://example.com/leetcode/1-two-sum/"/>
-    <id>http://example.com/leetcode/1-two-sum/</id>
+    <link href="https://xunzhan.github.io/leetcode/1-two-sum/"/>
+    <id>https://xunzhan.github.io/leetcode/1-two-sum/</id>
     <published>2021-12-16T19:04:32.000Z</published>
     <updated>2022-04-12T05:28:47.004Z</updated>
     
@@ -84,14 +84,14 @@
     
     
     
-    <category term="leetcode" scheme="http://example.com/categories/leetcode/"/>
+    <category term="leetcode" scheme="https://xunzhan.github.io/categories/leetcode/"/>
     
     
-    <category term="lc-easy" scheme="http://example.com/tags/lc-easy/"/>
+    <category term="lc-easy" scheme="https://xunzhan.github.io/tags/lc-easy/"/>
     
-    <category term="array" scheme="http://example.com/tags/array/"/>
+    <category term="array" scheme="https://xunzhan.github.io/tags/array/"/>
     
-    <category term="hash map" scheme="http://example.com/tags/hash-map/"/>
+    <category term="hash map" scheme="https://xunzhan.github.io/tags/hash-map/"/>
     
   </entry>
   
