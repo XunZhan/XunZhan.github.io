@@ -25,6 +25,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo Common Command</title>
+    <url>/techblog/hexo-common-command/</url>
+    <content><![CDATA[<h3 id="Build-a-blog"><a href="#Build-a-blog" class="headerlink" title="Build a blog"></a>Build a blog</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br></pre></td></tr></table></figure>
+
+<h3 id="Preview-a-blog"><a href="#Preview-a-blog" class="headerlink" title="Preview a blog"></a>Preview a blog</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h3 id="Publish-a-blog"><a href="#Publish-a-blog" class="headerlink" title="Publish a blog"></a>Publish a blog</h3>]]></content>
+      <categories>
+        <category>techblog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1. Two Sum</title>
     <url>/leetcode/1-two-sum/</url>
     <content><![CDATA[<h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h4><p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.  </p>
@@ -42,21 +57,6 @@
         <tag>lc-easy</tag>
         <tag>array</tag>
         <tag>hash map</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Common Command</title>
-    <url>/techblog/hexo-common-command/</url>
-    <content><![CDATA[<h3 id="Build-a-blog"><a href="#Build-a-blog" class="headerlink" title="Build a blog"></a>Build a blog</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br></pre></td></tr></table></figure>
-
-<h3 id="Preview-a-blog"><a href="#Preview-a-blog" class="headerlink" title="Preview a blog"></a>Preview a blog</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<h3 id="Publish-a-blog"><a href="#Publish-a-blog" class="headerlink" title="Publish a blog"></a>Publish a blog</h3>]]></content>
-      <categories>
-        <category>techblog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
