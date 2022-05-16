@@ -13,16 +13,24 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xunzhan.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-<script src="/plugins/live2d-widget/autoload.js"></script>
 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap" rel="stylesheet">
+
+
+<script src="/plugins/live2d-widget/autoload.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Xun">
@@ -156,24 +164,26 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  
+  <p class="site-author-name" itemprop="name">Xun</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">tags</span>
+          
+          <a href="/real-tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -215,16 +225,830 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/235-236-1644-1650-1676-lowest-common-ancestor-of-a-binary-tree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/leetcode/235-236-1644-1650-1676-lowest-common-ancestor-of-a-binary-tree/" class="post-title-link" itemprop="url">{235, 236, 1644, 1650, 1676} Lowest Common Ancestor of a Binary Tree</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-05-15 23:34:29" itemprop="dateCreated datePublished" datetime="2022-05-15T23:34:29-07:00">2022-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-16 00:12:59" itemprop="dateModified" datetime="2022-05-16T00:12:59-07:00">2022-05-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree"><a href="#235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree" class="headerlink" title="235  Lowest Common Ancestor of a Binary Search Tree"></a>235  Lowest Common Ancestor of a Binary Search Tree</h2><h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
+<p>[]</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>put example here</p>
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><p>put constraints here</p>
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><h4 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h4><h5 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h5><h5 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h5>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/124-binary-tree-maximum-path-sum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/leetcode/124-binary-tree-maximum-path-sum/" class="post-title-link" itemprop="url">124. Binary Tree Maximum Path Sum</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-05-09 23:06:28" itemprop="dateCreated datePublished" datetime="2022-05-09T23:06:28-07:00">2022-05-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-15 23:56:30" itemprop="dateModified" datetime="2022-05-15T23:56:30-07:00">2022-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><p>A <strong>path</strong> in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence <strong>at most once</strong>. Note that the path does not need to pass through the root.</p>
+<p>The path <strong>sum of a path</strong> is the sum of the node’s values in the path.</p>
+<p>Given the <code>root</code> of a binary tree, return the maximum path <strong>sum</strong> of any <strong>non-empty path</strong>.</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p><img src="/images/leetcode/lc-124-1.jpg"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [1,2,3]</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: The optimal path is 2 -&gt; 1 -&gt; 3 with a path sum of 2 + 1 + 3 = 6.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><p>put constraints here</p>
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><h4 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h4><h5 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h5><h5 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h5>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/152-maximum-product-subarray/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/leetcode/152-maximum-product-subarray/" class="post-title-link" itemprop="url">152. Maximum Product Subarray</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-30 15:12:32" itemprop="dateCreated datePublished" datetime="2022-04-30T15:12:32-07:00">2022-04-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-15 23:56:24" itemprop="dateModified" datetime="2022-05-15T23:56:24-07:00">2022-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><p>Given a <strong>1-indexed</strong> array of integers numbers that is already sorted in <strong>non-decreasing order</strong>, find two numbers such that they add up to a specific target number. Let these two numbers be <code>numbers[index1]</code> and <code>numbers[index2]</code> where <code>1 &lt;= index1 &lt; index2 &lt;= numbers.length</code>.</p>
+<p>Return the indices of the two numbers, <code>index1</code> and <code>index2</code>, added by one as an integer array <code>[index1, index2]</code> of length 2.</p>
+<p>The tests are generated such that there is exactly one solution. You may not use the same element twice.</p>
+<p>Your solution must use only constant extra space.</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: numbers = [2,7,11,15], target = 9</span><br><span class="line">Output: [1,2]</span><br><span class="line">Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: numbers = [2,3,4], target = 6</span><br><span class="line">Output: [1,3]</span><br><span class="line">Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].</span><br></pre></td></tr></table></figure>
+
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">2 &lt;= numbers.length &lt;= 3 * 104</span><br><span class="line">-1000 &lt;= numbers[i] &lt;= 1000</span><br><span class="line">numbers is sorted in non-decreasing order.</span><br><span class="line">-1000 &lt;= target &lt;= 1000</span><br><span class="line">The tests are generated such that there is exactly one solution.</span><br></pre></td></tr></table></figure>
+
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><h4 id="Two-Pointers"><a href="#Two-Pointers" class="headerlink" title="Two Pointers"></a>Two Pointers</h4><p>We use two indices, initially pointing to the first and the last element, respectively. Compare the sum of these two elements with target. If the sum is equal to target, we found the exactly only solution. If it is less than target, we increase the smaller index by one. If it is greater than target, we decrease the larger index by one. Move the indices and repeat the comparison until the solution is found.</p>
+<h5 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; numbers, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> high = numbers.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (low &lt; high) &#123;</span><br><span class="line">        <span class="keyword">int</span> sum = numbers[low] + numbers[high];</span><br><span class="line">                        </span><br><span class="line">        <span class="keyword">if</span> (sum == target) &#123;</span><br><span class="line">            <span class="keyword">return</span> &#123;low + <span class="number">1</span>, high + <span class="number">1</span>&#125;;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; target) &#123;</span><br><span class="line">            ++low;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            --high;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// In case there is no solution</span></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="number">-1</span>, <span class="number">-1</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n)</code><br>Space: <code>O(1)</code></p>
+<h5 id="Follow-Up"><a href="#Follow-Up" class="headerlink" title="Follow Up"></a>Follow Up</h5><p>What if the problem constraints were different and we needed to consider integer overflow when adding <code>numbers[low]</code> and <code>numbers[high]</code>? In that case, to prevent an overflow error, we could cast our numbers from int data type to long data type before adding them together, e.g.: <code>long sum = static_cast&lt;long&gt;(numbers[low]) + numbers[high]</code> for C++. Casting ensures that we will not get the overflow error since the signed long data type supports numbers up to <code>2^63 - 1</code>. Alternatively, if we cannot use long integers, then we can check if <code>numbers[low] &gt; (1 &lt;&lt; 31) - 1 - numbers[high]</code> at the beginning of each iteration. If this condition is true, then <code>numbers[low] + numbers[high]</code> will result in integer overflow, and so we would move the larger index to the left.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/15-three-sum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/leetcode/15-three-sum/" class="post-title-link" itemprop="url">15. Three Sum</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-30 14:57:47" itemprop="dateCreated datePublished" datetime="2022-04-30T14:57:47-07:00">2022-04-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-15 23:56:45" itemprop="dateModified" datetime="2022-05-15T23:56:45-07:00">2022-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><p>Given an integer array <code>nums</code>, return all the triplets <code>[nums[i], nums[j], nums[k]]</code> such that <code>i != j, i != k, and j != k</code>, and <code>nums[i] + nums[j] + nums[k] == 0</code>.</p>
+<p>Notice that the solution set must not contain duplicate triplets.</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-1,0,1,2,-1,-4]</span><br><span class="line">Output: [[-1,-1,2],[-1,0,1]]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = []</span><br><span class="line">Output: []</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [0]</span><br><span class="line">Output: []</span><br></pre></td></tr></table></figure>
+
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 &lt;= nums.length &lt;= 3000</span><br><span class="line">-105 &lt;= nums[i] &lt;= 105</span><br></pre></td></tr></table></figure>
+
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><h4 id="Two-Pointers"><a href="#Two-Pointers" class="headerlink" title="Two Pointers"></a>Two Pointers</h4><p>We will follow the same two pointers pattern as in <a target="_blank" rel="noopener" href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">Two Sum II</a>. It requires the array to be sorted, so we’ll do that first. As our BCR is <code>O(n^2)</code>, sorting the array would not change the overall time complexity.</p>
+<p>To make sure the result contains unique triplets, we need to skip duplicate values. It is easy to do because repeating values are next to each other in a sorted array.</p>
+<p>After sorting the array, we move our pivot element <code>nums[i]</code> and analyze elements to its right. We find all pairs whose sum is equal <code>-nums[i]</code> using the two pointers pattern, so that the sum of the pivot element (<code>nums[i]</code>) and the pair (<code>-nums[i]</code>) is equal to zero.</p>
+<h5 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h5><p>Original code in the <strong>Solution</strong> Section:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="built_in">sort</span>(<span class="built_in">begin</span>(nums), <span class="built_in">end</span>(nums));</span><br><span class="line">        vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; res;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>() &amp;&amp; nums[i] &lt;= <span class="number">0</span>; ++i)</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> || nums[i - <span class="number">1</span>] != nums[i]) &#123;</span><br><span class="line">                <span class="built_in">twoSumII</span>(nums, i, res);</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">twoSumII</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> i, vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; &amp;res)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> lo = i + <span class="number">1</span>, hi = nums.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (lo &lt; hi) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = nums[i] + nums[lo] + nums[hi];</span><br><span class="line">            <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                ++lo;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                --hi;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(&#123; nums[i], nums[lo++], nums[hi--] &#125;);</span><br><span class="line">                <span class="keyword">while</span> (lo &lt; hi &amp;&amp; nums[lo] == nums[lo - <span class="number">1</span>])</span><br><span class="line">                    ++lo;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>More readable version: </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">    </span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; ans;</span><br><span class="line">    <span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="comment">// fix 3 index &#123;i,j,k&#125;, i&lt;j&lt;k, in case we have duplicates</span></span><br><span class="line">        <span class="comment">// i -&gt; i, j -&gt; low, k -&gt; high</span></span><br><span class="line">        <span class="keyword">int</span> low = i+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> high = nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// two sum ii solution</span></span><br><span class="line">        <span class="keyword">while</span> (low &lt; high) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = nums[i] + nums[low] + nums[high];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                low ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (sum &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                high --;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                ans.<span class="built_in">push_back</span>(vector&lt;<span class="keyword">int</span>&gt;(&#123;nums[i], nums[low], nums[high]&#125;));</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// remove duplicates for j, also need to move it to next different num</span></span><br><span class="line">                <span class="keyword">do</span> &#123;</span><br><span class="line">                    low ++;</span><br><span class="line">                &#125; <span class="keyword">while</span> (low &lt; nums.<span class="built_in">size</span>() &amp;&amp; nums[low] == nums[low<span class="number">-1</span>]);</span><br><span class="line">                <span class="comment">// remove duplicates for k, also need to move it to next different num</span></span><br><span class="line">                <span class="keyword">do</span> &#123;</span><br><span class="line">                    high --;</span><br><span class="line">                &#125; <span class="keyword">while</span> (high&gt;=<span class="number">0</span> &amp;&amp; nums[high] == nums[high+<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// remove duplicates for i</span></span><br><span class="line">        <span class="keyword">while</span> (i+<span class="number">1</span>&lt;nums.<span class="built_in">size</span>() &amp;&amp; nums[i] == nums[i+<span class="number">1</span>]) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n^2)</code><br>Space: from <code>O(n)</code> to <code>O(n·logn)</code>, depending on the implementation of the sorting algorithm. For the purpose of complexity analysis, we ignore the memory required for the output.</p>
+<h5 id="Follow-Up"><a href="#Follow-Up" class="headerlink" title="Follow Up"></a>Follow Up</h5><p>其实<code>remove duplicates for k</code>这个部分不需要。当我们移动<code>j</code>的位置时，必然保证之后对于同样的<code>k</code>，一定不是符合<code>sum=0</code>的答案，会直接跳过。</p>
+<h4 id="Hashset"><a href="#Hashset" class="headerlink" title="Hashset"></a>Hashset</h4><p>Since triplets must sum up to the target value, we can try the hash table approach from the <a target="_blank" rel="noopener" href="https://leetcode.com/problems/two-sum/">Two Sum</a> solution. This approach won’t work, however, if the sum is not necessarily equal to the target, like in <a target="_blank" rel="noopener" href="https://leetcode.com/problems/3sum-smaller/">3Sum Smaller</a> and <a target="_blank" rel="noopener" href="https://leetcode.com/problems/3sum-closest/">3Sum Closest</a>.</p>
+<p>We move our pivot element <code>nums[i]</code> and analyze elements to its right. We find all pairs whose sum is equal <code>-nums[i]</code> using the Two Sum: One-pass Hash Table approach, so that the sum of the pivot element (<code>nums[i]</code>) and the pair (<code>-nums[i]</code>) is equal to zero.</p>
+<p>To do that, we process each element <code>nums[j]</code> to the right of the pivot, and check whether a complement <code>-nums[i] - nums[j]</code> is already in the hashset. If it is, we found a triplet. Then, we add <code>nums[j]</code> to the hashset, so it can be used as a complement from that point on.</p>
+<p>Like in the approach above, we will also sort the array so we can skip repeated values. We provide a different way to avoid duplicates in the <a href="#no-sort">No-Sort</a> approach below.</p>
+<h5 id="Algorithm-1"><a href="#Algorithm-1" class="headerlink" title="Algorithm"></a>Algorithm</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">    <span class="built_in">sort</span>(<span class="built_in">begin</span>(nums), <span class="built_in">end</span>(nums));</span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; res;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>() &amp;&amp; nums[i] &lt;= <span class="number">0</span>; ++i)</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">0</span> || nums[i - <span class="number">1</span>] != nums[i]) &#123;</span><br><span class="line">            <span class="built_in">twoSum</span>(nums, i, res);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">twoSum</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> i, vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; &amp;res)</span> </span>&#123;</span><br><span class="line">    unordered_set&lt;<span class="keyword">int</span>&gt; seen;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = -nums[i] - nums[j];</span><br><span class="line">        <span class="keyword">if</span> (seen.<span class="built_in">count</span>(complement)) &#123;</span><br><span class="line">            res.<span class="built_in">push_back</span>(&#123;nums[i], complement, nums[j]&#125;);</span><br><span class="line">            <span class="keyword">while</span> (j + <span class="number">1</span> &lt; nums.<span class="built_in">size</span>() &amp;&amp; nums[j] == nums[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                ++j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        seen.<span class="built_in">insert</span>(nums[j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Complexity-1"><a href="#Complexity-1" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n^2)</code><br>Space: <code>O(n)</code> for the hash set.</p>
+<h4 id="No-Sort"><a href="#No-Sort" class="headerlink" title="No Sort"></a>No Sort</h4><p>What if you cannot modify the input array, and you want to avoid copying it due to memory constraints?</p>
+<p>We can adapt the hashset approach above to work for an unsorted array. We can put a combination of three values into a hashset to avoid duplicates. Values in a combination should be ordered (e.g. ascending). Otherwise, we can have results with the same values in the different positions.</p>
+<h5 id="Algorithm-2"><a href="#Algorithm-2" class="headerlink" title="Algorithm"></a>Algorithm</h5><p>The algorithm is similar to the hashset approach above. We just need to add few optimizations so that it works efficiently for repeated values:</p>
+<ul>
+<li><p>Use another hashset dups to skip duplicates in the outer loop. Without this optimization, the submission will time out for the test case with 3,000 zeroes. This case is handled naturally when the array is sorted.</p>
+</li>
+<li><p>Instead of re-populating a hashset every time in the inner loop, we can use a hashmap and populate it once. Values in the hashmap will indicate whether we have encountered that element in the current iteration. When we process <code>nums[j]</code> in the inner loop, we set its hashmap value to <code>i</code>. This indicates that we can now use <code>nums[j]</code> as a complement for <code>nums[i]</code>.</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">    set&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; res;</span><br><span class="line">    unordered_set&lt;<span class="keyword">int</span>&gt; dups;</span><br><span class="line">    unordered_map&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; seen;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); ++i)</span><br><span class="line">        <span class="keyword">if</span> (dups.<span class="built_in">insert</span>(nums[i]).second) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">                <span class="keyword">int</span> complement = -nums[i] - nums[j];</span><br><span class="line">                <span class="keyword">auto</span> it = seen.<span class="built_in">find</span>(complement);</span><br><span class="line">                <span class="keyword">if</span> (it != <span class="built_in">end</span>(seen) &amp;&amp; it-&gt;second == i) &#123;</span><br><span class="line">                    vector&lt;<span class="keyword">int</span>&gt; triplet = &#123;nums[i], nums[j], complement&#125;;</span><br><span class="line">                    <span class="built_in">sort</span>(<span class="built_in">begin</span>(triplet), <span class="built_in">end</span>(triplet));</span><br><span class="line">                    res.<span class="built_in">insert</span>(triplet);</span><br><span class="line">                &#125;</span><br><span class="line">                seen[nums[j]] = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;(<span class="built_in">begin</span>(res), <span class="built_in">end</span>(res));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Complexity-2"><a href="#Complexity-2" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n^2)</code> We have outer and inner loops, each going through <code>n</code> elements.<br>While the asymptotic complexity is the same, this algorithm is noticeably slower than the previous approach. Lookups in a hashset, though requiring a constant time, are expensive compared to the direct memory access.</p>
+<p>Space: <code>O(n)</code> for the hashset/hashmap.<br>For the purpose of complexity analysis, we ignore the memory required for the output. However, in this approach we also store output in the hashset for deduplication. In the worst case, there could be <code>O(n^2)</code> triplets in the output, like for this example: <code>[-k, -k + 1, ..., -1, 0, 1, ... k - 1, k]</code>. Adding a new number to this sequence will produce <code>n / 3</code> new triplets.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/techblog/hexo-next-customize/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/techblog/hexo-next-customize/" class="post-title-link" itemprop="url">hexo-next-customize</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-26 23:47:53 / Modified: 23:50:07" itemprop="dateCreated datePublished" datetime="2022-04-26T23:47:53-07:00">2022-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/techblog/" itemprop="url" rel="index"><span itemprop="name">techblog</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Code-Block-Toolbar"><a href="#Code-Block-Toolbar" class="headerlink" title="Code Block Toolbar"></a>Code Block Toolbar</h3><p>Note setting</p>
+<h3 id="Font-Size"><a href="#Font-Size" class="headerlink" title="Font Size"></a>Font Size</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/560-subarray-sum-equals-k/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/leetcode/560-subarray-sum-equals-k/" class="post-title-link" itemprop="url">560. Subarray Sum Equals K</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-26 08:40:08" itemprop="dateCreated datePublished" datetime="2022-04-26T08:40:08-07:00">2022-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-15 23:56:12" itemprop="dateModified" datetime="2022-05-15T23:56:12-07:00">2022-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><p>Given an array of integers nums and an integer <code>k</code>, return the total number of subarrays whose sum equals to <code>k</code>.</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,1,1], k = 2</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [1,2,3], k = 3</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= nums.length &lt;= 2 * 10^4</span><br><span class="line">-1000 &lt;= nums[i] &lt;= 1000</span><br><span class="line">-10^7 &lt;= k &lt;= 10^7</span><br></pre></td></tr></table></figure>
+
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><h4 id="Brute-Force"><a href="#Brute-Force" class="headerlink" title="Brute Force"></a>Brute Force</h4><p>The simplest method is to consider every possible subarray of the given <code>nums</code> array, find the sum of the elements of each of those subarrays and check for the equality of the sum obtained with the given <code>k</code>. Whenever the sum equals <code>k</code>, we can increment the <code>count</code> used to store the required result.</p>
+<h5 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">subarraySum</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> start = <span class="number">0</span>; start &lt; nums.length; start++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> end = start + <span class="number">1</span>; end &lt;= nums.length; end++) &#123;</span><br><span class="line">                <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = start; i &lt; end; i++)</span><br><span class="line">                    sum += nums[i];</span><br><span class="line">                <span class="keyword">if</span> (sum == k)</span><br><span class="line">                    count++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n^3)</code><br>Space: <code>O(1)</code></p>
+<h4 id="Cumulative-Sum"><a href="#Cumulative-Sum" class="headerlink" title="Cumulative Sum"></a>Cumulative Sum</h4><p>Let <code>sum[i] = sum from index 0to i</code>. When we need subarray sum from <code>i</code> to <code>j</code>, we can calculate it using <code>sum[j] - sum[i] + nums[i]</code>.</p>
+<h4 id="Algorithm-1"><a href="#Algorithm-1" class="headerlink" title="Algorithm"></a>Algorithm</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">subarraySum</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(n)</span></span>;</span><br><span class="line">        dp[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;n; i++) &#123;</span><br><span class="line">            dp[i] = dp[i<span class="number">-1</span>] + nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i; j&lt;n; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (dp[j] - dp[i] + nums[i] == k) &#123;</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">                    </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Complexity-1"><a href="#Complexity-1" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n)</code><br>Space: <code>O(n)</code></p>
+<h4 id="Hash-Map"><a href="#Hash-Map" class="headerlink" title="Hash Map"></a>Hash Map</h4><h5 id="Algorithm-2"><a href="#Algorithm-2" class="headerlink" title="Algorithm"></a>Algorithm</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">subarraySum</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    unordered_map&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; map;</span><br><span class="line">    map[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">        sum+=nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.<span class="built_in">count</span>(sum-k)) &#123;</span><br><span class="line">            res+=map[sum-k];</span><br><span class="line">        &#125;</span><br><span class="line">        map[sum]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">subarraySum</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>, sum = <span class="number">0</span>;</span><br><span class="line">    HashMap &lt; Integer, Integer &gt; map = <span class="keyword">new</span> HashMap &lt; &gt; ();</span><br><span class="line">    map.put(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        sum += nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(sum - k))</span><br><span class="line">            count += map.get(sum - k);</span><br><span class="line">        map.put(sum, map.getOrDefault(sum, <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Complexity-2"><a href="#Complexity-2" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n)</code> ? C++ map insert might be O(n)<br>Space: <code>O(n)</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/articles/2021-annual-report/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/articles/2021-annual-report/" class="post-title-link" itemprop="url">2021 年度报告</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-23 22:52:11" itemprop="dateCreated datePublished" datetime="2022-04-23T22:52:11-07:00">2022-04-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-24 00:14:59" itemprop="dateModified" datetime="2022-04-24T00:14:59-07:00">2022-04-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/articles/" itemprop="url" rel="index"><span itemprop="name">articles</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="2021年的总结"><a href="#2021年的总结" class="headerlink" title="2021年的总结"></a>2021年的总结</h3><p>终于有时间静下心来写关于去年的总结了。在去年的年底结束了长达十多年的学生的身份，难过肯定是有的，但是我也终于意识到我不可能永远借用这样的身份，说是借口或许更加贴切，来完成我的一生。为了给自己留点面子，也为了让年度报告有机会出些续集，把好事坏事分开来说吧。</p>
+<p>如果只用一个词语概括2021，那就是“混乱”。在“最后一学期了好好放纵”和“还有最后一门课为了gpa还得把作业凑出来拿个过得去的分”的矛盾里，我没有效率地写作业，玩不好也学不好，最后反而草草毕业一片狼藉。在“我拿到了return offer不用担心工作”和“收到其他想要尝试的面试但是马上要回国度假”的矛盾里，我把面试做了一半，然后把之前的准备抛在脑后回家当了两个月的米虫。在“发现了我之后想要努力的方向”和“这个方向的就业前景不如general sde好且对数学物理基础要求极高”的矛盾里，我放弃了继续深入研究然后在步入社会之后抱怨还是我的初心最好。</p>
+<p>现在看来，我几乎是在每一个关键点都完美地做出错误的选择。</p>
+<p>这些问题归根结底，都是对于自己能力的不自信和对未来的规划不明确导致的。在过去的两年，我刚刚学会了“尝试不要去逃避困难”这件事情，which is 大部分正常人都有的思想觉悟。我被保护的太好了，我并不忌讳承认这点，很少体会到真正的失败和无力是什么感觉。离开家人之后，我才意识到独立并不仅仅是敢于一个人在夜晚睡觉或是自己可以烧一顿好吃的饭（虽然这对我来说已经是迈出很大一步），独立是在充满暗礁与漩涡的现实里，即使没有罗盘，也从不放弃掌舵，也依然清楚自己的航向。</p>
+<p>关于规划不明确的解决办法，我已经知道自己在未来一年内都要尝试的方向，并且努力去求职相关的工作岗位，目前已经在准备简历和知识储备。关于对于能力不自信的解决办法，我必须要更加努力的学习，毋庸置疑，前两年的最好的学习时间我几乎浪费了一半。当我可以向不相关领域的人介绍本领域的基本体系和workflow的时候，那会是一个新的阶段。如果要达到，我必须更多的涉猎相关的书籍，有能力完成深入的学习。最重要的，重新训练独立思考的能力。网络上遍布唾手可得的资源，而我已经对“思考”这件事情放弃了关注。然而无论是生活上的懒还是思想上的懒，对于我做为一个“人”的存在，都是致命的。</p>
+<p>坏事说完了。可以说说好事，虽然并不多。我终于和爸爸妈妈团聚，从隔离酒店出来的时候，妈妈和我都是跑着去拥抱对方，妈妈说她没哭，但我觉得她只是忍着没哭而已，和我一样。还有看到爸爸和奶奶都很开心，在家里睡了两年来从没有过的好觉。我会感觉回家永远是一个正确的决定，也是我这两年最开心的时刻，是的，我确信这比我拿了return offer更值得高兴。我希望家人们都可以平平安安健健康康的，疫情快一些过去，如果可以的话。</p>
+<h3 id="一些无关理性的话"><a href="#一些无关理性的话" class="headerlink" title="一些无关理性的话"></a>一些无关理性的话</h3><p>我开始体会到作为一个独立的人痛苦，我也相信这只是折磨的开始。梦想和现实从来就不是榫卯，而是两张砂纸，在无数次撕扯与摩擦里，我逐渐感受到热量。他灼烧着我，我也觉得痛苦，但我奇怪得想要去享受……这会让我觉得我是一个客观存在的个体，经历过挣扎的痕迹才是对我的存在的肯定，并且使我拥有带着力量的美感。当我明白真正想要的是什么时，才能做到真正的包容。</p>
+<h3 id="2022年的计划"><a href="#2022年的计划" class="headerlink" title="2022年的计划"></a>2022年的计划</h3><p>我没有很好的自控力，作为第一篇年度报告的计划部分，太宏观或者模糊的目标都会使我执行起来更加困难，从而导致放弃。所以我决定列举出数量合适的具体操作，按照priority从高到低排序：</p>
+<ol>
+<li>规律作息，十二点前睡觉。</li>
+<li>少刷短视频，尝试完成一些长篇和深度的阅读。</li>
+<li>每周完成3-5个lc。</li>
+<li>多关心自己的亲人，能够和他们通话时请不要拖延。</li>
+</ol>
+<p>关于4，并不是说家人不重要，而是目前需要完善的地方相较前几条更少。有些时候被琐事困扰，既不想和他们分享烦恼又需要自己的空间，导致了沟通的时间变少。今年希望我可以做到也多关心家人的生活，能够多和他们聊会儿天对他们来说就已经是一件很开心的事情了：）</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/42-trapping-rain-water/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/leetcode/42-trapping-rain-water/" class="post-title-link" itemprop="url">42. Trapping Rain Water</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-20 23:23:17" itemprop="dateCreated datePublished" datetime="2022-04-20T23:23:17-07:00">2022-04-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-15 23:56:41" itemprop="dateModified" datetime="2022-05-15T23:56:41-07:00">2022-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><p>Given <code>n</code> non-anegative integers representing an elevation map where the width of each bar is <code>1</code>, compute how much water it can trap after raining.</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/trapping-rain-water/">Leetcode</a></p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: </span><br><span class="line">The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. </span><br><span class="line">In this case, 6 units of rain water (blue section) are being trapped.</span><br><span class="line"></span><br><span class="line">Input: height = [4,2,0,3,2,5]</span><br><span class="line">Output: 9</span><br></pre></td></tr></table></figure>
+
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">n == height.length</span><br><span class="line">1 &lt;= n &lt;= 2 * 10^4</span><br><span class="line">0 &lt;= height[i] &lt;= 10^5</span><br></pre></td></tr></table></figure>
+
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><h4 id="Brute-Force"><a href="#Brute-Force" class="headerlink" title="Brute Force"></a>Brute Force</h4><p>Do as directed in question. For each element in the array, we find the maximum level of water it can trap after the rain, which is equal to the minimum of maximum height of bars on both the sides minus its own height.</p>
+<h5 id="Alogrithm"><a href="#Alogrithm" class="headerlink" title="Alogrithm"></a>Alogrithm</h5><ul>
+<li>init <code>ans = 0</code></li>
+<li>iterate height from left to right: <ul>
+<li>init left_max = 0, right_max = 0</li>
+<li>iterate from current element to the beginning: <code>left_max = max(left_max, height[j])</code></li>
+<li>iterate from current element to the end: <code>right_max = max(right_max, height[j])</code></li>
+<li>Update <code>ans += min(left_max, right_max) - height[i]</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n^2)</code><br>Space: <code>O(1)</code></p>
+<h4 id="Dynamic-Programming"><a href="#Dynamic-Programming" class="headerlink" title="Dynamic Programming"></a>Dynamic Programming</h4><p>In brute force, we iterate over the left and right parts again and again just to find the highest bar size upto that index. But, this could be stored. Voila, dynamic programming.</p>
+<h5 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h5><ul>
+<li>Find maximum height of bar from the left end upto an index <code>i</code> in the array <code>left_max</code></li>
+<li>Find maximum height of bar from the right end upto an index <code>i</code> in the array <code>right_max</code></li>
+<li>Iterate over the height array and update ans</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">trap</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> len = height.<span class="built_in">size</span>();</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">leftMax</span><span class="params">(len)</span></span>;</span><br><span class="line">        <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">rightMax</span><span class="params">(len)</span></span>;</span><br><span class="line">        </span><br><span class="line">        leftMax[<span class="number">0</span>] = height[<span class="number">0</span>];</span><br><span class="line">        rightMax[len<span class="number">-1</span>] = height[len<span class="number">-1</span>];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;len; i++) &#123;</span><br><span class="line">            leftMax[i]= <span class="built_in">max</span>(height[i], leftMax[i<span class="number">-1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = len<span class="number">-2</span>; i&gt;=<span class="number">0</span>; i--) &#123;</span><br><span class="line">            rightMax[i] = <span class="built_in">max</span>(height[i], rightMax[i+<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;height.<span class="built_in">size</span>()<span class="number">-1</span>; i++) &#123;</span><br><span class="line">            ans += <span class="built_in">max</span>(<span class="built_in">min</span>(leftMax[i<span class="number">-1</span>], rightMax[i+<span class="number">1</span>]) - height[i], <span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="Complexity-1"><a href="#Complexity-1" class="headerlink" title="Complexity"></a>Complexity</h6><p>Time: <code>O(n)</code><br>Space: <code>O(n)</code></p>
+<h4 id="Monotonic-Stack"><a href="#Monotonic-Stack" class="headerlink" title="Monotonic Stack"></a>Monotonic Stack</h4><p>Instead of storing the largest bar upto an index as in <a href="#Dynamic-Programming">approach 2</a>, we can use stack to keep track of the bars that are bounded by longer bars and hence, may store water. Using the stack, we can do the calculations in only one iteration.</p>
+<p>We keep a stack and iterate over the array. We add the index of the bar to the stack if bar is smaller than or equal to the bar at top of stack, which means that the current bar is bounded by the previous bar in the stack. If we found a bar longer than that at the top, we are sure that the bar at the top of the stack is bounded by the current bar and a previous bar in the stack, hence, we can pop it and add resulting trapped water to <code>ans</code>.</p>
+<h5 id="Alogrithm-1"><a href="#Alogrithm-1" class="headerlink" title="Alogrithm"></a>Alogrithm</h5><ul>
+<li>Use stack to store the indices of the bars</li>
+<li>Iterate the array:<ul>
+<li>While stack is not empty and <code>height[current] &gt; height[st.top()]</code><ul>
+<li>It means that the stack element can be popped. Pop the top element as <code>top</code></li>
+<li>Find distance between the current element and the element at top of stack, which is to be filled: <code>distance = current - st.top() - 1</code></li>
+<li>Find bounded_height: <code>bounded_height = min(height[current], height[st.top()]) - height[top]</code></li>
+<li>Add the trapped water to answer: <code>ans += distance * bounded_height</code></li>
+</ul>
+</li>
+<li>Push current index to stack</li>
+<li>Move current to next position</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">trap</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; height)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> ans = <span class="number">0</span>, current = <span class="number">0</span>;</span><br><span class="line">    stack&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line">    <span class="keyword">while</span> (current &lt; height.<span class="built_in">size</span>()) &#123;</span><br><span class="line">        <span class="keyword">while</span> (!st.<span class="built_in">empty</span>() &amp;&amp; height[current] &gt; height[st.<span class="built_in">top</span>()]) &#123;</span><br><span class="line">            <span class="keyword">int</span> top = st.<span class="built_in">top</span>();</span><br><span class="line">            st.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span> (st.<span class="built_in">empty</span>())</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">int</span> distance = current - st.<span class="built_in">top</span>() - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> bounded_height = <span class="built_in">min</span>(height[current], height[st.<span class="built_in">top</span>()]) - height[top];</span><br><span class="line">            ans += distance * bounded_height;</span><br><span class="line">        &#125;</span><br><span class="line">        st.<span class="built_in">push</span>(current++);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="Complexity-2"><a href="#Complexity-2" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n)</code><br>Space: <code>O(n)</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Xun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -312,11 +1136,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Xun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Xun">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -330,9 +1159,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-04-11 22:18:33 / Modified: 23:34:13" itemprop="dateCreated datePublished" datetime="2022-04-11T22:18:33-07:00">2022-04-11</time>
+      <time title="Created: 2022-04-11 22:18:33" itemprop="dateCreated datePublished" datetime="2022-04-11T22:18:33-07:00">2022-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-04-17 01:03:49" itemprop="dateModified" datetime="2022-04-17T01:03:49-07:00">2022-04-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -354,11 +1189,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="Build-a-blog"><a href="#Build-a-blog" class="headerlink" title="Build a blog"></a>Build a blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate</span><br></pre></td></tr></table></figure>
-
-<h3 id="Preview-a-blog"><a href="#Preview-a-blog" class="headerlink" title="Preview a blog"></a>Preview a blog</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<h3 id="Publish-a-blog"><a href="#Publish-a-blog" class="headerlink" title="Publish a blog"></a>Publish a blog</h3>
+          <p>Reference:<br><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a><br><a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a><br><a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a><br><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/techblog/hexo-common-command/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -376,92 +1215,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/1-two-sum/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Xun">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xun">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/leetcode/1-two-sum/" class="post-title-link" itemprop="url">1. Two Sum</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-12-16 11:04:32" itemprop="dateCreated datePublished" datetime="2021-12-16T11:04:32-08:00">2021-12-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-04-11 22:28:47" itemprop="dateModified" datetime="2022-04-11T22:28:47-07:00">2022-04-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/leetcode/" itemprop="url" rel="index"><span itemprop="name">leetcode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h4><p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.  </p>
-<p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the same element twice.  </p>
-<p>You can return the answer in any order.  </p>
-<h4 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [2,7,11,15], target = 9</span><br><span class="line">Output: [0,1]</span><br><span class="line">Output: Because nums[0] + nums[1] == 9, we return [0, 1].</span><br></pre></td></tr></table></figure>
-
-<h4 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; hash;</span><br><span class="line">        vector&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;nums.<span class="built_in">size</span>(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> fn = target - nums[i];</span><br><span class="line">            <span class="keyword">if</span> ( hash.<span class="built_in">find</span>(fn) != hash.<span class="built_in">end</span>())</span><br><span class="line">            &#123;</span><br><span class="line">                ans.<span class="built_in">push_back</span>(i);</span><br><span class="line">                ans.<span class="built_in">push_back</span>(hash[fn]);</span><br><span class="line">                <span class="keyword">return</span> ans;</span><br><span class="line">            &#125;</span><br><span class="line">            hash[nums[i]] = i;   </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>Time: <code>O(n)</code><br>Space: <code>O(n)</code></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
 
 </div>
   </main>

@@ -111,7 +111,8 @@ function loadWidget(config) {
 
 	(function welcomeMessage() {
 		let text;
-		if (location.pathname === "/about-me/index.html") { // 如果是主页
+		//console.log(location.pathname);
+		if (location.pathname === "/about-me/") { // 如果是主页
 			const now = new Date().getHours();
 			if (now > 5 && now <= 8) text = "早，一日之计在于晨，一年之计在于春。";
 			else if (now > 8 && now <= 11) text = "课业繁重也不要久坐。";
@@ -162,7 +163,7 @@ function loadWidget(config) {
 		
 		soundPlaying = true;
 		soundHowler = new Howl({
-			src: ["../plugins/live2d-widget/" + soundInfo.path]
+			src: ["/plugins/live2d-widget/" + soundInfo.path]
 		})
 
 		soundHowler.on('play', function() {
