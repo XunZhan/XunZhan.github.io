@@ -90,6 +90,21 @@ NexT.utils = {
     });
   },
 
+  registerCodeWithDropDown: function() {
+    let figure = document.querySelectorAll('figure.highlight');
+    if (figure.length === 0) figure = document.querySelectorAll('pre:not(.mermaid)');
+    figure.forEach(element => {
+      // do not add drop down for plaintext code block
+      if (element.classList.contains('plaintext'))
+        return;
+
+        element.insertAdjacentHTML('beforebegin', `<details class="note info no-icon" open="">`);
+        let detail = element.previousElementSibling;
+        detail.appendChild(element);
+        element.insertAdjacentHTML('beforebegin', `<summary><p>${element.classList[1].toUpperCase()}</p></summary>`);
+    })
+  },
+
   wrapTableWithBox: function() {
     document.querySelectorAll('table').forEach(element => {
       const box = document.createElement('div');
