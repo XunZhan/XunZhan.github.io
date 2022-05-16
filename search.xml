@@ -51,46 +51,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo Common Command</title>
-    <url>/techblog/hexo-common-command/</url>
-    <content><![CDATA[<p>Reference:<br><a href="https://hexo.io/">Hexo</a><br><a href="https://hexo.io/docs/">documentation</a><br><a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a><br><a href="https://github.com/hexojs/hexo/issues">GitHub</a></p>
-<span id="more"></span>
-
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong><em>NOTE:</em></strong>  Generally, we use hexo clean &amp;&amp; hexo generate</p>
-</blockquote>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>techblog</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo-next-customize</title>
-    <url>/techblog/hexo-next-customize/</url>
-    <content><![CDATA[<h3 id="Code-Block-Toolbar"><a href="#Code-Block-Toolbar" class="headerlink" title="Code Block Toolbar"></a>Code Block Toolbar</h3><p>Note setting</p>
-<h3 id="Font-Size"><a href="#Font-Size" class="headerlink" title="Font Size"></a>Font Size</h3>]]></content>
-      <categories>
-        <category>techblog</category>
-      </categories>
-      <tags>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1. Two Sum</title>
     <url>/leetcode/1-two-sum/</url>
     <content><![CDATA[<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.  </p>
@@ -302,6 +262,46 @@
       <tags>
         <tag>Array</tag>
         <tag>Dynamic Programming</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Common Command</title>
+    <url>/techblog/hexo-common-command/</url>
+    <content><![CDATA[<p>Reference:<br><a href="https://hexo.io/">Hexo</a><br><a href="https://hexo.io/docs/">documentation</a><br><a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a><br><a href="https://github.com/hexojs/hexo/issues">GitHub</a></p>
+<span id="more"></span>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong><em>NOTE:</em></strong>  Generally, we use hexo clean &amp;&amp; hexo generate</p>
+</blockquote>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>techblog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo-next-customize</title>
+    <url>/techblog/hexo-next-customize/</url>
+    <content><![CDATA[<h3 id="Code-Block-Toolbar"><a href="#Code-Block-Toolbar" class="headerlink" title="Code Block Toolbar"></a>Code Block Toolbar</h3><p>Note setting</p>
+<h3 id="Font-Size"><a href="#Font-Size" class="headerlink" title="Font Size"></a>Font Size</h3>]]></content>
+      <categories>
+        <category>techblog</category>
+      </categories>
+      <tags>
+        <tag>NexT</tag>
       </tags>
   </entry>
 </search>
