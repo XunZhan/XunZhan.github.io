@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/code-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/code-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xunzhan.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap" rel="stylesheet">
+
+
+<script src="/plugins/live2d-widget/autoload.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+
+    <meta name="description" content="ProblemsGiven an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i !&#x3D; j, i !&#x3D; k, and j !&#x3D; k, and nums[i] + nums[j] + nums[k] &#x3D;&#x3D; 0. Notice that the solution set must n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="15. Three Sum">
+<meta property="og:url" content="https://xunzhan.github.io/leetcode/15-three-sum/index.html">
+<meta property="og:site_name" content="Xun">
+<meta property="og:description" content="ProblemsGiven an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i !&#x3D; j, i !&#x3D; k, and j !&#x3D; k, and nums[i] + nums[j] + nums[k] &#x3D;&#x3D; 0. Notice that the solution set must n">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-30T21:57:47.000Z">
+<meta property="article:modified_time" content="2022-05-22T03:46:33.347Z">
+<meta property="article:author" content="Xun">
+<meta property="article:tag" content="Array">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://xunzhan.github.io/leetcode/15-three-sum/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://xunzhan.github.io/leetcode/15-three-sum/","path":"leetcode/15-three-sum/","title":"15. Three Sum"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>15. Three Sum | Xun</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Xun" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-toolbar.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Xun</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">得时无怠，功不唐捐。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-about-me-重帘"><a href="/about-me/" rel="section"><i class="fa fa-address-book fa-fw"></i>About Me 重帘</a></li>
+        <li class="menu-item menu-item-projects-轻舟"><a href="/projects/" rel="section"><i class="fa fa-server fa-fw"></i>Projects 轻舟</a></li>
+        <li class="menu-item menu-item-techblog-东风"><a href="/techblog/" rel="section"><i class="fa fa-pen fa-fw"></i>TechBlog 东风</a></li>
+        <li class="menu-item menu-item-leetcode-箭雨"><a href="/leetcode/" rel="section"><i class="fa fa-flask fa-fw"></i>Leetcode 箭雨</a></li>
+        <li class="menu-item menu-item-articles-惊梦"><a href="/articles/" rel="section"><i class="fa fa-coffee fa-fw"></i>Articles 惊梦</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>FindMore 明烛
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problems"><span class="nav-number">1.</span> <span class="nav-text">Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constraints"><span class="nav-number">3.</span> <span class="nav-text">Constraints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solutions"><span class="nav-number">4.</span> <span class="nav-text">Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Two-Pointers"><span class="nav-number">4.1.</span> <span class="nav-text">Two Pointers</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Algorithm"><span class="nav-number">4.1.1.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Complexity"><span class="nav-number">4.1.2.</span> <span class="nav-text">Complexity</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Follow-Up"><span class="nav-number">4.1.3.</span> <span class="nav-text">Follow Up</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hashset"><span class="nav-number">4.2.</span> <span class="nav-text">Hashset</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Algorithm-1"><span class="nav-number">4.2.1.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Complexity-1"><span class="nav-number">4.2.2.</span> <span class="nav-text">Complexity</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#No-Sort"><span class="nav-number">4.3.</span> <span class="nav-text">No Sort</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Algorithm-2"><span class="nav-number">4.3.1.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Complexity-2"><span class="nav-number">4.3.2.</span> <span class="nav-text">Complexity</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Xun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/XunZhan" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;XunZhan" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/15-three-sum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="15. Three Sum | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          15. Three Sum
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-30 14:57:47" itemprop="dateCreated datePublished" datetime="2022-04-30T14:57:47-07:00">2022-04-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-21 20:46:33" itemprop="dateModified" datetime="2022-05-21T20:46:33-07:00">2022-05-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h3><p>Given an integer array <code>nums</code>, return all the triplets <code>[nums[i], nums[j], nums[k]]</code> such that <code>i != j, i != k, and j != k</code>, and <code>nums[i] + nums[j] + nums[k] == 0</code>.</p>
+<p>Notice that the solution set must not contain duplicate triplets.</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-1,0,1,2,-1,-4]</span><br><span class="line">Output: [[-1,-1,2],[-1,0,1]]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = []</span><br><span class="line">Output: []</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [0]</span><br><span class="line">Output: []</span><br></pre></td></tr></table></figure>
+
+<h3 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0 &lt;= nums.length &lt;= 3000</span><br><span class="line">-105 &lt;= nums[i] &lt;= 105</span><br></pre></td></tr></table></figure>
+
+<h3 id="Solutions"><a href="#Solutions" class="headerlink" title="Solutions"></a>Solutions</h3><h4 id="Two-Pointers"><a href="#Two-Pointers" class="headerlink" title="Two Pointers"></a>Two Pointers</h4><p>We will follow the same two pointers pattern as in <a target="_blank" rel="noopener" href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">Two Sum II</a>. It requires the array to be sorted, so we’ll do that first. As our BCR is <code>O(n^2)</code>, sorting the array would not change the overall time complexity.</p>
+<p>To make sure the result contains unique triplets, we need to skip duplicate values. It is easy to do because repeating values are next to each other in a sorted array.</p>
+<p>After sorting the array, we move our pivot element <code>nums[i]</code> and analyze elements to its right. We find all pairs whose sum is equal <code>-nums[i]</code> using the two pointers pattern, so that the sum of the pivot element (<code>nums[i]</code>) and the pair (<code>-nums[i]</code>) is equal to zero.</p>
+<h5 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h5><p>Original code in the <strong>Solution</strong> Section:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="built_in">sort</span>(<span class="built_in">begin</span>(nums), <span class="built_in">end</span>(nums));</span><br><span class="line">        vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; res;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>() &amp;&amp; nums[i] &lt;= <span class="number">0</span>; ++i)</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> || nums[i - <span class="number">1</span>] != nums[i]) &#123;</span><br><span class="line">                <span class="built_in">twoSumII</span>(nums, i, res);</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">twoSumII</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> i, vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; &amp;res)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> lo = i + <span class="number">1</span>, hi = nums.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (lo &lt; hi) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = nums[i] + nums[lo] + nums[hi];</span><br><span class="line">            <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                ++lo;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                --hi;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                res.<span class="built_in">push_back</span>(&#123; nums[i], nums[lo++], nums[hi--] &#125;);</span><br><span class="line">                <span class="keyword">while</span> (lo &lt; hi &amp;&amp; nums[lo] == nums[lo - <span class="number">1</span>])</span><br><span class="line">                    ++lo;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>More readable version: </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">    </span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; ans;</span><br><span class="line">    <span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>());</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="comment">// fix 3 index &#123;i,j,k&#125;, i&lt;j&lt;k, in case we have duplicates</span></span><br><span class="line">        <span class="comment">// i -&gt; i, j -&gt; low, k -&gt; high</span></span><br><span class="line">        <span class="keyword">int</span> low = i+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> high = nums.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// two sum ii solution</span></span><br><span class="line">        <span class="keyword">while</span> (low &lt; high) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = nums[i] + nums[low] + nums[high];</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                low ++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (sum &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                high --;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                ans.<span class="built_in">push_back</span>(vector&lt;<span class="keyword">int</span>&gt;(&#123;nums[i], nums[low], nums[high]&#125;));</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// remove duplicates for j, also need to move it to next different num</span></span><br><span class="line">                <span class="keyword">do</span> &#123;</span><br><span class="line">                    low ++;</span><br><span class="line">                &#125; <span class="keyword">while</span> (low &lt; nums.<span class="built_in">size</span>() &amp;&amp; nums[low] == nums[low<span class="number">-1</span>]);</span><br><span class="line">                <span class="comment">// remove duplicates for k, also need to move it to next different num</span></span><br><span class="line">                <span class="keyword">do</span> &#123;</span><br><span class="line">                    high --;</span><br><span class="line">                &#125; <span class="keyword">while</span> (high&gt;=<span class="number">0</span> &amp;&amp; nums[high] == nums[high+<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// remove duplicates for i</span></span><br><span class="line">        <span class="keyword">while</span> (i+<span class="number">1</span>&lt;nums.<span class="built_in">size</span>() &amp;&amp; nums[i] == nums[i+<span class="number">1</span>]) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Complexity"><a href="#Complexity" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n^2)</code><br>Space: from <code>O(n)</code> to <code>O(n·logn)</code>, depending on the implementation of the sorting algorithm. For the purpose of complexity analysis, we ignore the memory required for the output.</p>
+<h5 id="Follow-Up"><a href="#Follow-Up" class="headerlink" title="Follow Up"></a>Follow Up</h5><p>其实<code>remove duplicates for k</code>这个部分不需要。当我们移动<code>j</code>的位置时，必然保证之后对于同样的<code>k</code>，一定不是符合<code>sum=0</code>的答案，会直接跳过。</p>
+<h4 id="Hashset"><a href="#Hashset" class="headerlink" title="Hashset"></a>Hashset</h4><p>Since triplets must sum up to the target value, we can try the hash table approach from the <a target="_blank" rel="noopener" href="https://leetcode.com/problems/two-sum/">Two Sum</a> solution. This approach won’t work, however, if the sum is not necessarily equal to the target, like in <a target="_blank" rel="noopener" href="https://leetcode.com/problems/3sum-smaller/">3Sum Smaller</a> and <a target="_blank" rel="noopener" href="https://leetcode.com/problems/3sum-closest/">3Sum Closest</a>.</p>
+<p>We move our pivot element <code>nums[i]</code> and analyze elements to its right. We find all pairs whose sum is equal <code>-nums[i]</code> using the Two Sum: One-pass Hash Table approach, so that the sum of the pivot element (<code>nums[i]</code>) and the pair (<code>-nums[i]</code>) is equal to zero.</p>
+<p>To do that, we process each element <code>nums[j]</code> to the right of the pivot, and check whether a complement <code>-nums[i] - nums[j]</code> is already in the hashset. If it is, we found a triplet. Then, we add <code>nums[j]</code> to the hashset, so it can be used as a complement from that point on.</p>
+<p>Like in the approach above, we will also sort the array so we can skip repeated values. We provide a different way to avoid duplicates in the <a href="#no-sort">No-Sort</a> approach below.</p>
+<h5 id="Algorithm-1"><a href="#Algorithm-1" class="headerlink" title="Algorithm"></a>Algorithm</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">    <span class="built_in">sort</span>(<span class="built_in">begin</span>(nums), <span class="built_in">end</span>(nums));</span><br><span class="line">    vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; res;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>() &amp;&amp; nums[i] &lt;= <span class="number">0</span>; ++i)</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">0</span> || nums[i - <span class="number">1</span>] != nums[i]) &#123;</span><br><span class="line">            <span class="built_in">twoSum</span>(nums, i, res);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">twoSum</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> i, vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; &amp;res)</span> </span>&#123;</span><br><span class="line">    unordered_set&lt;<span class="keyword">int</span>&gt; seen;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = -nums[i] - nums[j];</span><br><span class="line">        <span class="keyword">if</span> (seen.<span class="built_in">count</span>(complement)) &#123;</span><br><span class="line">            res.<span class="built_in">push_back</span>(&#123;nums[i], complement, nums[j]&#125;);</span><br><span class="line">            <span class="keyword">while</span> (j + <span class="number">1</span> &lt; nums.<span class="built_in">size</span>() &amp;&amp; nums[j] == nums[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                ++j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        seen.<span class="built_in">insert</span>(nums[j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Complexity-1"><a href="#Complexity-1" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n^2)</code><br>Space: <code>O(n)</code> for the hash set.</p>
+<h4 id="No-Sort"><a href="#No-Sort" class="headerlink" title="No Sort"></a>No Sort</h4><p>What if you cannot modify the input array, and you want to avoid copying it due to memory constraints?</p>
+<p>We can adapt the hashset approach above to work for an unsorted array. We can put a combination of three values into a hashset to avoid duplicates. Values in a combination should be ordered (e.g. ascending). Otherwise, we can have results with the same values in the different positions.</p>
+<h5 id="Algorithm-2"><a href="#Algorithm-2" class="headerlink" title="Algorithm"></a>Algorithm</h5><p>The algorithm is similar to the hashset approach above. We just need to add few optimizations so that it works efficiently for repeated values:</p>
+<ul>
+<li><p>Use another hashset dups to skip duplicates in the outer loop. Without this optimization, the submission will time out for the test case with 3,000 zeroes. This case is handled naturally when the array is sorted.</p>
+</li>
+<li><p>Instead of re-populating a hashset every time in the inner loop, we can use a hashmap and populate it once. Values in the hashmap will indicate whether we have encountered that element in the current iteration. When we process <code>nums[j]</code> in the inner loop, we set its hashmap value to <code>i</code>. This indicates that we can now use <code>nums[j]</code> as a complement for <code>nums[i]</code>.</p>
+</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; <span class="built_in">threeSum</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">    set&lt;vector&lt;<span class="keyword">int</span>&gt;&gt; res;</span><br><span class="line">    unordered_set&lt;<span class="keyword">int</span>&gt; dups;</span><br><span class="line">    unordered_map&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; seen;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); ++i)</span><br><span class="line">        <span class="keyword">if</span> (dups.<span class="built_in">insert</span>(nums[i]).second) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); ++j) &#123;</span><br><span class="line">                <span class="keyword">int</span> complement = -nums[i] - nums[j];</span><br><span class="line">                <span class="keyword">auto</span> it = seen.<span class="built_in">find</span>(complement);</span><br><span class="line">                <span class="keyword">if</span> (it != <span class="built_in">end</span>(seen) &amp;&amp; it-&gt;second == i) &#123;</span><br><span class="line">                    vector&lt;<span class="keyword">int</span>&gt; triplet = &#123;nums[i], nums[j], complement&#125;;</span><br><span class="line">                    <span class="built_in">sort</span>(<span class="built_in">begin</span>(triplet), <span class="built_in">end</span>(triplet));</span><br><span class="line">                    res.<span class="built_in">insert</span>(triplet);</span><br><span class="line">                &#125;</span><br><span class="line">                seen[nums[j]] = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> vector&lt;vector&lt;<span class="keyword">int</span>&gt;&gt;(<span class="built_in">begin</span>(res), <span class="built_in">end</span>(res));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Complexity-2"><a href="#Complexity-2" class="headerlink" title="Complexity"></a>Complexity</h5><p>Time: <code>O(n^2)</code> We have outer and inner loops, each going through <code>n</code> elements.<br>While the asymptotic complexity is the same, this algorithm is noticeably slower than the previous approach. Lookups in a hashset, though requiring a constant time, are expensive compared to the direct memory access.</p>
+<p>Space: <code>O(n)</code> for the hashset/hashmap.<br>For the purpose of complexity analysis, we ignore the memory required for the output. However, in this approach we also store output in the hashset for deduplication. In the worst case, there could be <code>O(n^2)</code> triplets in the output, like for this example: <code>[-k, -k + 1, ..., -1, 0, 1, ... k - 1, k]</code>. Adding a new number to this sequence will produce <code>n / 3</code> new triplets.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Array/" rel="tag"># Array</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/techblog/hexo-next-customize/" rel="prev" title="hexo-next-customize">
+                  <i class="fa fa-chevron-left"></i> hexo-next-customize
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/leetcode/152-maximum-product-subarray/" rel="next" title="152. Maximum Product Subarray">
+                  152. Maximum Product Subarray <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xun</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
