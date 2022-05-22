@@ -18,11 +18,8 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>techblog</category>
+        <category>Techblog</category>
       </categories>
-      <tags>
-        <tag>helloworld</tag>
-      </tags>
   </entry>
   <entry>
     <title>2021 年度报告</title>
@@ -44,7 +41,7 @@
 <p>关于4，并不是说家人不重要，而是目前需要完善的地方相较前几条更少。有些时候被琐事困扰，既不想和他们分享烦恼又需要自己的空间，导致了沟通的时间变少。今年希望我可以做到也多关心家人的生活，能够多和他们聊会儿天对他们来说就已经是一件很开心的事情了：）</p>
 ]]></content>
       <categories>
-        <category>articles</category>
+        <category>Articles</category>
       </categories>
       <tags>
         <tag>年度报告</tag>
@@ -286,7 +283,7 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>techblog</category>
+        <category>Techblog</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
@@ -298,7 +295,7 @@
     <content><![CDATA[<h3 id="Code-Block-Toolbar"><a href="#Code-Block-Toolbar" class="headerlink" title="Code Block Toolbar"></a>Code Block Toolbar</h3><p>Note setting</p>
 <h3 id="Font-Size"><a href="#Font-Size" class="headerlink" title="Font Size"></a>Font Size</h3>]]></content>
       <categories>
-        <category>techblog</category>
+        <category>Techblog</category>
       </categories>
       <tags>
         <tag>NexT</tag>

@@ -80,7 +80,7 @@ function loadWidget(config) {
 		//document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
 		//document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
 		document.querySelector("#waifu-tool .fa-camera-retro").addEventListener("click", () => {
-			showMessage("照片拍好了。", 6000, 9);
+			showMessage("照片拍好了。", 5000, 9);
 			Live2D.captureName = "photo.png";
 			Live2D.captureFrame = true;
 		});
@@ -89,7 +89,7 @@ function loadWidget(config) {
 		});
 		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
 			localStorage.setItem("waifu-display", Date.now());
-			showMessage("如果需要帮助，请在边栏找我。后会有期。", 2000, 11);
+			showMessage("如果需要帮助，请在边栏找我。后会有期。", 3000, 13);
 			document.getElementById("waifu").style.bottom = "-500px";
 			setTimeout(() => {
 				document.getElementById("waifu").style.display = "none";
@@ -99,13 +99,13 @@ function loadWidget(config) {
 		const devtools = () => {};
 		console.log("%c", devtools);
 		devtools.toString = () => {
-			showMessage("你打开了控制台，是想要看 什么吗？", 6000, 9);
+			showMessage("你打开了控制台，是想要看什么吗？", 5000, 9);
 		};
 		window.addEventListener("copy", () => {
-			showMessage("能够帮助到你是安久的荣幸，引用时烦请添加出处。", 6000, 9);
+			showMessage("能够帮助到你是安久的荣幸，引用时烦请添加出处。", 5000, 9);
 		});
 		window.addEventListener("visibilitychange", () => {
-			if (!document.hidden) showMessage("别来无恙。", 6000, 9);
+			if (!document.hidden) showMessage("别来无恙。", 5000, 9);
 		});
 	})();
 
@@ -133,7 +133,7 @@ function loadWidget(config) {
 		} else {
 			text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
 		}
-		showMessage(text, 7000, 8);
+		showMessage(text, 6000, 8);
 	})();
 
 	function showHitokoto() {
@@ -212,7 +212,7 @@ function loadWidget(config) {
 						if (!event.target.matches(selector)) continue;
 						text = randomSelection(text);
 						text = text.replace("{text}", event.target.innerText);
-						showMessage(text, 4000, 8);
+						showMessage(text, 3000, 8);
 						return;
 					}
 				});
@@ -221,7 +221,7 @@ function loadWidget(config) {
 						if (!event.target.matches(selector)) continue;
 						text = randomSelection(text);
 						text = text.replace("{text}", event.target.innerText);
-						showMessage(text, 4000, 8);
+						showMessage(text, 3000, 8);
 						return;
 					}
 				});
