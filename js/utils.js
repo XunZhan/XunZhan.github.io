@@ -98,7 +98,7 @@ NexT.utils = {
       if (element.classList.contains('plaintext'))
         return;
 
-        element.insertAdjacentHTML('beforebegin', `<details class="note info no-icon" open="">`);
+        element.insertAdjacentHTML('beforebegin', `<details class="note info no-icon" open>`);
         let detail = element.previousElementSibling;
         detail.appendChild(element);
         element.insertAdjacentHTML('beforebegin', `<summary><p>${element.classList[1].toUpperCase()}</p></summary>`);
