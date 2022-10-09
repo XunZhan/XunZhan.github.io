@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -32,15 +32,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 
 
-    <meta name="description" content="Code Block ToolbarNote setting Font Size">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+    <meta name="description" content="Code Block Toolbar Problem The prism plugin in for next does not offer the toolbox, it only supports the copy-tp-clipboard button. But for blogs with large content, they can be more readable with show">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo-next-customize">
+<meta property="og:title" content="Hexo NexT Customize Settings">
 <meta property="og:url" content="https://xunzhan.github.io/techblog/hexo-next-customize/index.html">
 <meta property="og:site_name" content="Xun">
-<meta property="og:description" content="Code Block ToolbarNote setting Font Size">
+<meta property="og:description" content="Code Block Toolbar Problem The prism plugin in for next does not offer the toolbox, it only supports the copy-tp-clipboard button. But for blogs with large content, they can be more readable with show">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-27T06:47:53.000Z">
-<meta property="article:modified_time" content="2022-05-22T03:47:31.556Z">
+<meta property="article:modified_time" content="2022-10-02T07:12:36.552Z">
 <meta property="article:author" content="Xun">
 <meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
@@ -50,10 +54,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://xunzhan.github.io/techblog/hexo-next-customize/","path":"techblog/hexo-next-customize/","title":"hexo-next-customize"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://xunzhan.github.io/techblog/hexo-next-customize/","path":"techblog/hexo-next-customize/","title":"Hexo NexT Customize Settings"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>hexo-next-customize | Xun</title>
+<title>Hexo NexT Customize Settings | Xun</title>
   
 
 
@@ -65,8 +69,7 @@
   </noscript>
 <link rel="alternate" href="/atom.xml" title="Xun" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-toolbar.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -164,7 +167,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-Block-Toolbar"><span class="nav-number">1.</span> <span class="nav-text">Code Block Toolbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Font-Size"><span class="nav-number">2.</span> <span class="nav-text">Font Size</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-Block-Toolbar"><span class="nav-number">1.</span> <span class="nav-text">Code Block Toolbar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem"><span class="nav-number">1.1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Assumptions"><span class="nav-number">1.2.</span> <span class="nav-text">Assumptions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions"><span class="nav-number">1.3.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Support-Emoji"><span class="nav-number">2.</span> <span class="nav-text">Support Emoji</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-2"><span class="nav-number">2.1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions-2"><span class="nav-number">2.2.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TODO"><span class="nav-number">3.</span> <span class="nav-text">TODO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Font-Size"><span class="nav-number">4.</span> <span class="nav-text">Font Size</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -177,7 +180,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -189,7 +192,7 @@
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -246,12 +249,12 @@
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="hexo-next-customize | Xun">
+      <meta itemprop="name" content="Hexo NexT Customize Settings | Xun">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo-next-customize
+          Hexo NexT Customize Settings
         </h1>
 
         <div class="post-meta-container">
@@ -269,7 +272,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-05-21 20:47:31" itemprop="dateModified" datetime="2022-05-21T20:47:31-07:00">2022-05-21</time>
+      <time title="Modified: 2022-10-02 00:12:36" itemprop="dateModified" datetime="2022-10-02T00:12:36-07:00">2022-10-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,8 +294,53 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="Code-Block-Toolbar"><a href="#Code-Block-Toolbar" class="headerlink" title="Code Block Toolbar"></a>Code Block Toolbar</h3><p>Note setting</p>
-<h3 id="Font-Size"><a href="#Font-Size" class="headerlink" title="Font Size"></a>Font Size</h3>
+        <h3 id="Code-Block-Toolbar">Code Block Toolbar</h3>
+<h4 id="Problem">Problem</h4>
+<p>The prism plugin in for next does not offer the toolbox, it only supports the copy-tp-clipboard button. But for blogs with large content, they can be more readable with show/hide codes.</p>
+<p>The problem is adding a button to show/hide code blocks in blogs. Note that code blocks will not only be used for codes. For example, in leetcode blogs, I use code blocks to display test cased and explanations.</p>
+<h4 id="Assumptions">Assumptions</h4>
+<ol>
+<li>Real codes will have its programming language mentioned after the code block prompt. And the real codes can be displayed or hidden.</li>
+<li>For all other use cases, I will not mentioned the programming language and they cannot be hidden.</li>
+</ol>
+<h4 id="Solutions">Solutions</h4>
+<ol>
+<li>Register a drop down action <code>registerCodeWithDropDown</code> in NexT’s global JS handlers <code>next/source/js/next-boot.js</code>.</li>
+<li>Implement the action in <code>next/source/js/utils.js</code>. In NexT, all the code and code blocks are wrapped inside a <code>&lt;figure&gt;</code> element, with the programming language marked or <code>plaintext</code> for unmentioned code blocks.</li>
+<li>For all the elements that has the programming language marked, we wrap the codes in a <code>&lt;details&gt;</code>. This will create a drop down button and I name the button using the language and add to the <code>&lt;summary&gt;</code> element. All names will be transferred to <strong>upper case</strong>.</li>
+<li>The structure comparison of plaintext and real codes are as follow:<br>
+Plaintext:</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">&quot;highlight plaintext&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-container&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;copy-btn&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-copy fa-fw&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>C++ code block:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span> <span class="attr">class</span>=<span class="string">&quot;note info no-icon&quot;</span> <span class="attr">open</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">summary</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>CPP<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">&quot;highlight cpp&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-container&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;copy-btn&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-copy fa-fw&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Support-Emoji">Support Emoji</h3>
+<h4 id="Problem-2">Problem</h4>
+<p>The default renderer in Hexo is <code>hexo-renderer-marked</code>, which does not support adding emoji in markdown. The problem is find a render to support emoji for Hexo.</p>
+<h4 id="Solutions-2">Solutions</h4>
+<ol>
+<li>
+<p><s>Tried to find emoji-friendly plugin <a target="_blank" rel="noopener" href="https://github.com/crimx/hexo-filter-github-emojis">hexo-filter-github-emojis</a></s> <strong>Not working.</strong> Tested with NexT theme, will affect the <code>live2d-widget</code> display, its special characters in js files will also be escaped and thus throw bugs in the console.</p>
+</li>
+<li>
+<p><s>Find a new rendered for hexo markdown <a target="_blank" rel="noopener" href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">hexo-renderer-markdown-it-plus</a></s> <strong>Is risky.</strong> Git repository is not well maintained, with many issue unresolved.</p>
+</li>
+<li>
+<p>Use the <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>, a faster and CommonMark compliant alternative for Hexo.</p>
+</li>
+<li>
+<p>Install new renderer.</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/hexo</span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Add config for the new renderer.</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">preset:</span> <span class="string">&#x27;default&#x27;</span></span><br><span class="line"><span class="attr">render:</span></span><br><span class="line">  <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">langPrefix:</span> <span class="string">&#x27;language-&#x27;</span></span><br><span class="line">  <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="TODO">TODO</h3>
+<p>live2d 在鼠标碰到link的时候都会触发message，增加一个判断，不要每次都出发（概率触发弹窗）</p>
+<h3 id="Font-Size">Font Size</h3>
+
     </div>
 
     
@@ -364,6 +412,11 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

@@ -97,7 +97,7 @@ function loadWidget(config) {
 			}, 3000);
 		});
 		const devtools = () => {};
-		console.log("%c", devtools);
+		//console.log("%c", devtools);
 		devtools.toString = () => {
 			showMessage("你打开了控制台，是想要看什么吗？", 5000, 9);
 		};
