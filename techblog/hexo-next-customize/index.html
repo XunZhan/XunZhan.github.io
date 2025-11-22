@@ -6,10 +6,9 @@
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/code-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/code-16x16.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-code.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-code-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-code-16x16.png">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -33,9 +32,7 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-
+<script src="/plugins/typed.js-2.0.12/typed.min.js"></script>
     <meta name="description" content="Code Block Toolbar Problem The prism plugin in for next does not offer the toolbox, it only supports the copy-tp-clipboard button. But for blogs with large content, they can be more readable with show">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo NexT Customize Settings">
@@ -44,7 +41,7 @@
 <meta property="og:description" content="Code Block Toolbar Problem The prism plugin in for next does not offer the toolbox, it only supports the copy-tp-clipboard button. But for blogs with large content, they can be more readable with show">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-27T06:47:53.000Z">
-<meta property="article:modified_time" content="2022-10-02T07:12:36.552Z">
+<meta property="article:modified_time" content="2023-06-20T05:55:01.144Z">
 <meta property="article:author" content="Xun">
 <meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
@@ -68,7 +65,7 @@
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
 <link rel="alternate" href="/atom.xml" title="Xun" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--blockquote-bg-color:#505050;--note-code-bg-color:#282828;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{background:0 0}button.darkmode-toggle{z-index:9999;opacity:.6}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="stylesheet" href="/css/prism.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -167,7 +164,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-Block-Toolbar"><span class="nav-number">1.</span> <span class="nav-text">Code Block Toolbar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem"><span class="nav-number">1.1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Assumptions"><span class="nav-number">1.2.</span> <span class="nav-text">Assumptions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions"><span class="nav-number">1.3.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Support-Emoji"><span class="nav-number">2.</span> <span class="nav-text">Support Emoji</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-2"><span class="nav-number">2.1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions-2"><span class="nav-number">2.2.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TODO"><span class="nav-number">3.</span> <span class="nav-text">TODO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Font-Size"><span class="nav-number">4.</span> <span class="nav-text">Font Size</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-Block-Toolbar"><span class="nav-number">1.</span> <span class="nav-text">Code Block Toolbar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem"><span class="nav-number">1.1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Assumptions"><span class="nav-number">1.2.</span> <span class="nav-text">Assumptions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions"><span class="nav-number">1.3.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Support-Emoji"><span class="nav-number">2.</span> <span class="nav-text">Support Emoji</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-2"><span class="nav-number">2.1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions-2"><span class="nav-number">2.2.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Support-Math-Formulas"><span class="nav-number">3.</span> <span class="nav-text">Support Math Formulas</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions-3"><span class="nav-number">3.1.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Support-Manual-Switch-for-Light-Dark-Mode"><span class="nav-number">4.</span> <span class="nav-text">Support Manual Switch for Light &amp; Dark Mode</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Question"><span class="nav-number">4.1.</span> <span class="nav-text">Question</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions-4"><span class="nav-number">4.2.</span> <span class="nav-text">Solutions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Follow-Up"><span class="nav-number">4.3.</span> <span class="nav-text">Follow Up</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Display-Image-Caption"><span class="nav-number">5.</span> <span class="nav-text">Display Image Caption</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-3"><span class="nav-number">5.1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solutions-5"><span class="nav-number">5.2.</span> <span class="nav-text">Solutions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Website-Counter-with-Map"><span class="nav-number">6.</span> <span class="nav-text">Website Counter with Map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Problem-4"><span class="nav-number">6.1.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Solution"><span class="nav-number">6.2.</span> <span class="nav-text">Solution</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TODO-List"><span class="nav-number">7.</span> <span class="nav-text">TODO List</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -180,7 +177,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">49</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -192,7 +189,7 @@
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -204,6 +201,12 @@
   </div>
 
 
+
+
+<div class="links-of-author site-overview-item animated">
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=4mg877YmkHfXKUO_KXVrETXyuFO4-k4iWazEQm2d21g&cl=ffffff&w=a">
+  </script>
+</div>
 
         </div>
       </div>
@@ -272,7 +275,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-10-02 00:12:36" itemprop="dateModified" datetime="2022-10-02T00:12:36-07:00">2022-10-02</time>
+      <time title="Modified: 2023-06-19 22:55:01" itemprop="dateModified" datetime="2023-06-19T22:55:01-07:00">2023-06-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -305,41 +308,127 @@
 </ol>
 <h4 id="Solutions">Solutions</h4>
 <ol>
-<li>Register a drop down action <code>registerCodeWithDropDown</code> in NexT’s global JS handlers <code>next/source/js/next-boot.js</code>.</li>
-<li>Implement the action in <code>next/source/js/utils.js</code>. In NexT, all the code and code blocks are wrapped inside a <code>&lt;figure&gt;</code> element, with the programming language marked or <code>plaintext</code> for unmentioned code blocks.</li>
-<li>For all the elements that has the programming language marked, we wrap the codes in a <code>&lt;details&gt;</code>. This will create a drop down button and I name the button using the language and add to the <code>&lt;summary&gt;</code> element. All names will be transferred to <strong>upper case</strong>.</li>
-<li>The structure comparison of plaintext and real codes are as follow:<br>
-Plaintext:</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">&quot;highlight plaintext&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-container&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;copy-btn&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-copy fa-fw&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li>
+<p>Register a drop down action <code>registerCodeWithDropDown</code> in NexT’s global JS handlers <code>next/source/js/next-boot.js</code>.</p>
+</li>
+<li>
+<p>Implement the action in <code>next/source/js/utils.js</code>. In NexT, all the code and code blocks are wrapped inside a <code>&lt;figure&gt;</code> element, with the programming language marked or <code>plaintext</code> for unmentioned code blocks.</p>
+</li>
+<li>
+<p>For all the elements that has the programming language marked, we wrap the codes in a <code>&lt;details&gt;</code>. This will create a drop down button and I name the button using the language and add to the <code>&lt;summary&gt;</code> element. All names will be transferred to <strong>upper case</strong>.</p>
+</li>
+<li>
+<p>The structure comparison of plaintext and real codes are as follow:<br>
+Plaintext:</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">&quot;highlight plaintext&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-container&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;copy-btn&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-copy fa-fw&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>C++ code block:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span> <span class="attr">class</span>=<span class="string">&quot;note info no-icon&quot;</span> <span class="attr">open</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">summary</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>CPP<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">&quot;highlight cpp&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-container&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;copy-btn&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-copy fa-fw&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">details</span> <span class="attr">class</span>=<span class="string">&quot;note-code info no-icon&quot;</span> <span class="attr">open</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">summary</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>CPP<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">&quot;highlight cpp&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-container&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;copy-btn&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-copy fa-fw&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h3 id="Support-Emoji">Support Emoji</h3>
 <h4 id="Problem-2">Problem</h4>
-<p>The default renderer in Hexo is <code>hexo-renderer-marked</code>, which does not support adding emoji in markdown. The problem is find a render to support emoji for Hexo.</p>
+<p>The default renderer in Hexo is <code>hexo-renderer-marked</code>, which does not support adding emoji in markdown. The problem is finding a renderer to support emoji for Hexo.</p>
 <h4 id="Solutions-2">Solutions</h4>
 <ol>
-<li>
-<p><s>Tried to find emoji-friendly plugin <a target="_blank" rel="noopener" href="https://github.com/crimx/hexo-filter-github-emojis">hexo-filter-github-emojis</a></s> <strong>Not working.</strong> Tested with NexT theme, will affect the <code>live2d-widget</code> display, its special characters in js files will also be escaped and thus throw bugs in the console.</p>
+<li><s>Tried to find emoji-friendly plugin <a target="_blank" rel="noopener" href="https://github.com/crimx/hexo-filter-github-emojis">hexo-filter-github-emojis</a></s> <strong>Not working.</strong> Tested with NexT theme, will affect the <code>live2d-widget</code> display, its special characters in js files will also be escaped. Thus it will throw bugs in the console and <code>live2d-widget</code> component can not be displayed.</li>
+<li><s>Find a new rendered for hexo markdown <a target="_blank" rel="noopener" href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">hexo-renderer-markdown-it-plus</a></s> <strong>Is risky.</strong> Git repository is not well maintained, with many issues unresolved.</li>
+<li>Use the <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>, a faster and CommonMark compliant alternative for Hexo.
+<ul>
+<li>Install new renderer.  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/hexo</span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p><s>Find a new rendered for hexo markdown <a target="_blank" rel="noopener" href="https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus">hexo-renderer-markdown-it-plus</a></s> <strong>Is risky.</strong> Git repository is not well maintained, with many issue unresolved.</p>
+<li>Add config for the new renderer.  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line">    <span class="attr">render:</span></span><br><span class="line">        <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">        <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line">    <span class="attr">plugins:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">markdown-it-emoji</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>Use the <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it</a>, a faster and CommonMark compliant alternative for Hexo.</p>
-</li>
-<li>
-<p>Install new renderer.</p>
+</ul>
 </li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /path/to/hexo</span><br><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-markdown-it --save</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>Add config for the new renderer.</li>
+<h3 id="Support-Math-Formulas">Support Math Formulas</h3>
+<p><a target="_blank" rel="noopener" href="https://theme-next.js.org/docs/third-party-services/math-equations.html">NexT Official Docs</a><br>
+In summary, NexT supports 2 math formulas renderer: MathJax and Katex. These two depends on different different <strong>markdown renderers</strong>.</p>
+<p>MathJax uses <code>hexo-renderer-pandoc</code>. Katex (light weight renderer) uses <code>hexo-renderer-markdown-it-plus/hexo-renderer-markdown-it</code> As we have already installed the <code>hexo-renderer-markdown-it</code> and do not need complex math equations, we can continue with Katex.</p>
+<h4 id="Solutions-3">Solutions</h4>
+<ol>
+<li>Install <code>hexo-renderer-markdown-it</code></li>
+<li>Add the plugin for the renderer to support Katex in NexT <code>_config.yml</code>: <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># VS Code will mark these configs with red lines</span></span><br><span class="line"><span class="comment"># But there are not real errors, just ignore them</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line"><span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-emoji</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-footnote</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&#x27;@renbaoshuo/markdown-it-katex&#x27;</span></span><br><span class="line">    <span class="attr">options:</span></span><br><span class="line">        <span class="attr">skipDelimitersCheck:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line"><span class="attr">preset:</span> <span class="string">&#x27;default&#x27;</span></span><br><span class="line"><span class="attr">render:</span></span><br><span class="line">  <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">langPrefix:</span> <span class="string">&#x27;language-&#x27;</span></span><br><span class="line">  <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="TODO">TODO</h3>
-<p>live2d 在鼠标碰到link的时候都会触发message，增加一个判断，不要每次都出发（概率触发弹窗）</p>
-<h3 id="Font-Size">Font Size</h3>
+<h3 id="Support-Manual-Switch-for-Light-Dark-Mode">Support Manual Switch for Light &amp; Dark Mode</h3>
+<h4 id="Question">Question</h4>
+<p>Hexo NexT theme provides the config for light/dark mode in config:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Dark Mode</span></span><br><span class="line"><span class="attr">darkmode:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>However, this is a restricted way to change between light and dark mode. Our purpose is to provide users with a component to take action in the webpage.</p>
+<h4 id="Solutions-4">Solutions</h4>
+<p><a target="_blank" rel="noopener" href="https://www.techgrow.cn/posts/abf4aee1.html">Darkmode in NexT</a></p>
+<ol>
+<li>
+<p>Install <code>hexo-next-darkmode</code></p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-next-darkmode --save</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Add config for the module in NexT <code>_config.yml</code>:</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">darkmode_js:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">bottom:</span> <span class="string">&#x27;64px&#x27;</span> <span class="comment"># default: &#x27;32px&#x27;</span></span><br><span class="line">    <span class="attr">right:</span> <span class="string">&#x27;32px&#x27;</span> <span class="comment"># default: &#x27;32px&#x27;</span></span><br><span class="line">    <span class="attr">left:</span> <span class="string">&#x27;unset&#x27;</span> <span class="comment"># default: &#x27;unset&#x27;</span></span><br><span class="line">    <span class="attr">time:</span> <span class="string">&#x27;0.5s&#x27;</span> <span class="comment"># default: &#x27;0.3s&#x27;</span></span><br><span class="line">    <span class="attr">mixColor:</span> <span class="string">&#x27;transparent&#x27;</span> <span class="comment"># default: &#x27;#fff&#x27;</span></span><br><span class="line">    <span class="attr">backgroundColor:</span> <span class="string">&#x27;transparent&#x27;</span> <span class="comment"># default: &#x27;#fff&#x27;</span></span><br><span class="line">    <span class="attr">buttonColorDark:</span> <span class="string">&#x27;#333&#x27;</span> <span class="comment"># default: &#x27;#100f2c&#x27;</span></span><br><span class="line">    <span class="attr">buttonColorLight:</span> <span class="string">&#x27;#fff&#x27;</span> <span class="comment"># default: &#x27;#fff&#x27;</span></span><br><span class="line">    <span class="attr">isActivated:</span> <span class="literal">false</span> <span class="comment"># default false</span></span><br><span class="line">    <span class="attr">saveInCookies:</span> <span class="literal">true</span> <span class="comment"># default: true</span></span><br><span class="line">    <span class="attr">label:</span> <span class="string">&#x27;🌓&#x27;</span> <span class="comment"># default: &#x27;&#x27;</span></span><br><span class="line">    <span class="attr">autoMatchOsTheme:</span> <span class="literal">true</span> <span class="comment"># default: true</span></span><br><span class="line">    <span class="attr">libUrl:</span> <span class="comment"># Set custom library cdn url for Darkmode.js</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Change default text inside the mode button to image</p>
+<ul>
+<li>Download <code>darkmode-js.min.js</code>. In <code>darkmode_js</code> config, <code>libUrl: '/plugins/darkmode-js/darkmode-js.min.js'</code>, change to the path you put the file.</li>
+<li>Modify <code>darkmode-js.min.js</code>. Start from line 162:  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">i = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// use img inside button instead of text</span></span><br><span class="line"><span class="comment">// (a.innerHTML = t.label),</span></span><br><span class="line"><span class="keyword">var</span> img = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;img&#x27;</span>);</span><br><span class="line">img.<span class="property">src</span> = <span class="string">&#x27;/images/darkmode-js/icons8-day-and-night-96.png&#x27;</span>;</span><br><span class="line">a.<span class="title function_">appendChild</span>(img);</span><br><span class="line"></span><br><span class="line">a.<span class="property">classList</span>.<span class="title function_">add</span>(<span class="string">&#x27;darkmode-toggle--inactive&#x27;</span>),</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>Customize blockquote background color<br>
+In the original settings, only text color in blockquote is changed when darkmode is enabled. But we would like to change the background color as well. Following steps are the setup for background color change. <strong>This can be expanded to all other attributes defined in <code>next/source/css/_colors.styl</code>.</strong></p>
+<ul>
+<li>
+<p>Config <code>blockquote-bg-color</code> in <code>NexT</code><br>
+In <code>next/source/css/_variables/base.styl</code>:</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$blockquote-bg-color          = $grey-lightest;</span><br><span class="line">$blockquote-bg-color-dark     = $grey-deep; </span><br></pre></td></tr></table></figure>
+<p>In <code>next/source/css/colors.styl</code>:</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// config for light mode</span><br><span class="line">--blockquote-bg-color: $blockquote-bg-color;</span><br><span class="line">...</span><br><span class="line">// config for dark mode (unused)</span><br><span class="line">--blockquote-bg-color: $blockquote-bg-color-dark;</span><br></pre></td></tr></table></figure>
+<p>❗ Actually the config for dark mode here is never used. The light mode css is from <code>NexT</code> while the dark mode css will be defined in plugin file.</p>
+</li>
+<li>
+<p>Config <code>blockquote-bg-color</code> in <code>hexo-next-darkmode</code><br>
+In <code>node_modules/hexo-next-darkmode/lib/darkmode.css</code>:</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.darkmode--activated &#123;</span><br><span class="line">    ...</span><br><span class="line">    // config the color for dark mode</span><br><span class="line">    --blockquote-bg-color: #505050;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  <div class="note warning"><p>We modify the settings in the <code>node_modules</code>, this means every time we reinstall this plugin, the config should be done again.</p>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="Follow-Up">Follow Up</h4>
+<p>Q: Why the switch is not displaying circular expanding animation as is it in other blogs’s <a target="_blank" rel="noopener" href="https://haomingzhang.com/hexo_3/">demo</a>?</p>
+<p>A: To answer this question we need to know what each fields means in <code>darkmode_js</code> config. For <code>backgroundColor</code>, it will set the webpage background color, which will override the value set in <code>NexT</code>. Changing it will not affect the animation. For <code>mixColor</code>, it is a new color that will be overlaid on some of the components and it is the key to the animation.</p>
+<p>If we set <code>$content-bg-color-dark = white;</code> and <code>mixColor: '#333'</code> and <code>backgroundColor: 'transparent'</code>, we can see the animation. The animation will change the original dark mode style and is not elegant, thus I choose to opt out the animation and keep the config in <code>NexT</code>.</p>
+<h3 id="Display-Image-Caption">Display Image Caption</h3>
+<h4 id="Problem-3">Problem</h4>
+<p>In <code>hexo</code>, when we add the <code>alt text</code> for an image, it will not display the text as the caption under the image. For example, when we insert an image in the post using <code>![Case 1](/images/leetcode/lc-790-3.png)</code>, the renderer only display the image itself without the <code>alt text</code> ‘Case 1’.</p>
+<h4 id="Solutions-5">Solutions</h4>
+<p>The solutions are mentioned in <code>NexT</code> issues: <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/issues/1017">https://github.com/theme-next/hexo-theme-next/issues/1017</a>. However, I am not willing to enable the <code>fancybox</code> or change current renderer to <code>hexo-renderer-pandoc</code>.</p>
+<p>Instead, my blog uses the <a target="_blank" rel="noopener" href="https://github.com/wayou/hexo-image-caption">hexo-image-caption</a> with few modification to the package.</p>
+<ol>
+<li>Installation: <code>npm install --save hexo-image-caption</code></li>
+<li>Go to <code>node_modules/hexo-image-caption/index.js</code>, change code to: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_post_render&#x27;</span>, <span class="keyword">function</span>(<span class="params">data</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (hexo.<span class="property">config</span>.<span class="property">image_caption</span> &amp;&amp; hexo.<span class="property">config</span>.<span class="property">image_caption</span>.<span class="property">enable</span> == <span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> className = hexo.<span class="property">config</span>.<span class="property">image_caption</span>.<span class="property">class_name</span> || <span class="string">&#x27;image-caption&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span> (data.<span class="property">layout</span> == <span class="string">&#x27;post&#x27;</span> || data.<span class="property">layout</span> == <span class="string">&#x27;page&#x27;</span> || data.<span class="property">layout</span> == <span class="string">&#x27;about&#x27;</span>) &#123;</span><br><span class="line">            data.<span class="property">content</span> = data.<span class="property">content</span>.<span class="title function_">replace</span>(<span class="regexp">/(&lt;img [^&gt;]*alt=&quot;([^&quot;]+)&quot;[^&gt;]*&gt;)/g</span>, <span class="string">&#x27;$1&#x27;</span> + <span class="string">&#x27;&lt;figcaption style=&quot;padding-top:5px&quot; class=&quot;image-caption&quot;&gt;$2&lt;/figcaption&gt;&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> data;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+ <div class="note warning"><p>We modify the settings in the <code>node_modules</code>, this means every time we reinstall this plugin, the config should be done again.</p>
+</div>
+</li>
+</ol>
+<h3 id="Website-Counter-with-Map">Website Counter with Map</h3>
+<h4 id="Problem-4">Problem</h4>
+<p>Display visitor counter and their location on the map.</p>
+<h4 id="Solution">Solution</h4>
+<ol>
+<li>Register personal website in <a target="_blank" rel="noopener" href="https://clustrmaps.com">ClustrMap</a></li>
+<li>In <code>Hexo NexT</code>, add the code in <code>themes/next/layout/_partials/sidebar/site-overview.njk</code></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;# <span class="title class_">Map</span> <span class="title class_">Widget</span> #&#125;</span><br><span class="line">&lt;div <span class="keyword">class</span>=<span class="string">&quot;links-of-author site-overview-item animated&quot;</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">id</span>=<span class="string">&quot;clustrmaps&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//clustrmaps.com/map_v2.js?d=4mg877YmkHfXKUO_KXVrETXyuFO4-k4iWazEQm2d21g&amp;cl=ffffff&amp;w=a&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="TODO-List">TODO List</h3>
+<ol>
+<li>live2d 在鼠标碰到link的时候都会触发message，增加一个判断，不要每次都触发（概率触发弹窗）</li>
+<li>亮暗模式切换的按钮label是个不太简约的emoji，想换成自定义icon. (已完成) 最好可以在切换后显示不同模式的icon</li>
+<li>文章底部切换前一篇与后一篇，最好按照category推荐而不是发布时间顺序</li>
+</ol>
 
     </div>
 
@@ -361,7 +450,7 @@ Plaintext:</li>
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/leetcode/15-three-sum/" rel="next" title="15. Three Sum">
+                <a href="/leetcode/15-3sum/" rel="next" title="15. Three Sum">
                   15. Three Sum <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -384,7 +473,7 @@ Plaintext:</li>
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -417,8 +506,31 @@ Plaintext:</li>
   
 
   <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
 
 
+<script src="/plugins/darkmode-js/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#222',
+  buttonColorLight: '#222',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: false
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
 
 </body>
 </html>

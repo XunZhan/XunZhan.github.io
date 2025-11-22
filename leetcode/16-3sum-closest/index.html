@@ -6,10 +6,9 @@
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/code-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/code-16x16.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-code.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-code-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-code-16x16.png">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -33,18 +32,16 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-
+<script src="/plugins/typed.js-2.0.12/typed.min.js"></script>
     <meta name="description" content="Problems Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that ea">
 <meta property="og:type" content="article">
-<meta property="og:title" content="16-thress-sum-closest">
+<meta property="og:title" content="16. 3Sum Closest">
 <meta property="og:url" content="https://xunzhan.github.io/leetcode/16-3sum-closest/index.html">
 <meta property="og:site_name" content="Xun">
 <meta property="og:description" content="Problems Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that ea">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-09T02:01:06.000Z">
-<meta property="article:modified_time" content="2022-10-09T05:30:01.904Z">
+<meta property="article:modified_time" content="2023-01-03T08:40:18.105Z">
 <meta property="article:author" content="Xun">
 <meta name="twitter:card" content="summary">
 
@@ -53,10 +50,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://xunzhan.github.io/leetcode/16-3sum-closest/","path":"leetcode/16-3sum-closest/","title":"16-thress-sum-closest"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://xunzhan.github.io/leetcode/16-3sum-closest/","path":"leetcode/16-3sum-closest/","title":"16. 3Sum Closest"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>16-thress-sum-closest | Xun</title>
+<title>16. 3Sum Closest | Xun</title>
   
 
 
@@ -67,7 +64,7 @@
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
 <link rel="alternate" href="/atom.xml" title="Xun" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--blockquote-bg-color:#505050;--note-code-bg-color:#282828;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{background:0 0}button.darkmode-toggle{z-index:9999;opacity:.6}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="stylesheet" href="/css/prism.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -166,7 +163,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problems"><span class="nav-number">1.</span> <span class="nav-text">Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constraints"><span class="nav-number">3.</span> <span class="nav-text">Constraints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solutions"><span class="nav-number">4.</span> <span class="nav-text">Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Approach-1"><span class="nav-number">4.1.</span> <span class="nav-text">Approach 1</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Algorithm"><span class="nav-number">4.1.1.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Complexity"><span class="nav-number">4.1.2.</span> <span class="nav-text">Complexity</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problems"><span class="nav-number">1.</span> <span class="nav-text">Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constraints"><span class="nav-number">3.</span> <span class="nav-text">Constraints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solutions"><span class="nav-number">4.</span> <span class="nav-text">Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Two-Pointers"><span class="nav-number">4.1.</span> <span class="nav-text">Two Pointers</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Algorithm"><span class="nav-number">4.1.1.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Complexity"><span class="nav-number">4.1.2.</span> <span class="nav-text">Complexity</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,7 +176,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">49</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -191,7 +188,7 @@
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -203,6 +200,12 @@
   </div>
 
 
+
+
+<div class="links-of-author site-overview-item animated">
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=4mg877YmkHfXKUO_KXVrETXyuFO4-k4iWazEQm2d21g&cl=ffffff&w=a">
+  </script>
+</div>
 
         </div>
       </div>
@@ -248,12 +251,12 @@
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="16-thress-sum-closest | Xun">
+      <meta itemprop="name" content="16. 3Sum Closest | Xun">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          16-thress-sum-closest
+          16. 3Sum Closest
         </h1>
 
         <div class="post-meta-container">
@@ -263,9 +266,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-10-08 19:01:06 / Modified: 22:30:01" itemprop="dateCreated datePublished" datetime="2022-10-08T19:01:06-07:00">2022-10-08</time>
+      <time title="Created: 2022-10-08 19:01:06" itemprop="dateCreated datePublished" datetime="2022-10-08T19:01:06-07:00">2022-10-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-01-03 00:40:18" itemprop="dateModified" datetime="2023-01-03T00:40:18-08:00">2023-01-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,14 +305,11 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-1,2,1,-4], target = 1</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [0,0,0], target = 1</span><br><span class="line">Output: 0</span><br><span class="line">Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).</span><br></pre></td></tr></table></figure>
 <h3 id="Constraints">Constraints</h3>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 &lt;= nums.length &lt;= 1000</span><br><span class="line">-1000 &lt;= nums[i] &lt;= 1000</span><br><span class="line">$$-10^4$$ &lt;= target &lt;= $$10^4$$</span><br></pre></td></tr></table></figure>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8641079999999999em;"></span><span class="strut bottom" style="height:0.8641079999999999em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathrm">1</span><span class="mord"><span class="mord mathrm">0</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">4</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">(</mo><mi>β</mi><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup><mo>+</mo><mi>c</mi><mrow><mo fence="true">(</mo><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></msubsup><msub><mi>α</mi><mi>n</mi></msub><msub><mi>p</mi><mi>n</mi></msub><mo fence="true">)</mo></mrow><mo fence="true">)</mo></mrow><mi>ψ</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>t</mi><mo>)</mo><mo>=</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>ψ</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\left(\beta m c^2 + c \left(\sum_{n=1}^3\alpha_n p_n\right)\right) \psi(x,t)
-= i\hbar \frac{\partial \psi(x,t)}{\partial t}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.8011130000000004em;"></span><span class="strut bottom" style="height:3.068226em;vertical-align:-1.267113em;"></span><span class="base displaystyle textstyle uncramped"><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mord mathit" style="margin-right:0.05278em;">β</span><span class="mord mathit">m</span><span class="mord"><span class="mord mathit">c</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">+</span><span class="mord mathit">c</span><span class="minner displaystyle textstyle uncramped"><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mop op-limits"><span class="vlist"><span style="top:1.1671129999999998em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathit">n</span><span class="mrel">=</span><span class="mord mathrm">1</span></span></span></span><span style="top:-0.000005000000000143778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span><span class="op-symbol large-op mop">∑</span></span></span><span style="top:-1.2500050000000003em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">3</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord"><span class="mord mathit" style="margin-right:0.0037em;">α</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.0037em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord"><span class="mord mathit">p</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">)</span></span></span><span class="style-wrap reset-textstyle textstyle uncramped" style="top:0em;"><span class="delimsizing size4">)</span></span></span><span class="mord mathit" style="margin-right:0.03588em;">ψ</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">i</span><span class="mord mathrm">ℏ</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm" style="margin-right:0.05556em;">∂</span><span class="mord mathit">t</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm" style="margin-right:0.05556em;">∂</span><span class="mord mathit" style="margin-right:0.03588em;">ψ</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mpunct">,</span><span class="mord mathit">t</span><span class="mclose">)</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 &lt;= nums.length &lt;= 1000</span><br><span class="line">-1000 &lt;= nums[i] &lt;= 1000</span><br><span class="line">10^4 &lt;= target &lt;= 10^4</span><br></pre></td></tr></table></figure>
 <h3 id="Solutions">Solutions</h3>
-<h4 id="Approach-1">Approach 1</h4>
+<h4 id="Two-Pointers">Two Pointers</h4>
+<p>The two pointers pattern requires the array to be sorted, so we do that first. As our BCR is <code>O(n^2)</code>, the sort operation would not change the overall time complexity.</p>
+<p>In the sorted array, we process each value from left to right. For value v, we need to find a pair which sum, ideally, is equal to target - v. We will follow the same two pointers approach as for 3Sum, however, since this ‘ideal’ pair may not exist, we will track the smallest absolute difference between the sum and the target. The two pointers approach naturally enumerates pairs so that the sum moves toward the target.</p>
 <h5 id="Algorithm">Algorithm</h5>
 <h5 id="Complexity">Complexity</h5>
 
@@ -324,6 +330,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/articles/jing-gao-shi-ci/" rel="next" title="荆高诗词合集">
+                  荆高诗词合集 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -344,7 +353,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -377,8 +386,31 @@
   
 
   <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
 
 
+<script src="/plugins/darkmode-js/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#222',
+  buttonColorLight: '#222',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: false
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
 
 </body>
 </html>

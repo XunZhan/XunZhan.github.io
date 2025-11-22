@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-code.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-code-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-code-16x16.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xunzhan.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap" rel="stylesheet">
+
+
+<script src="/plugins/live2d-widget/autoload.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/plugins/typed.js-2.0.12/typed.min.js"></script>
+    <meta name="description" content="Problems There is a tree (i.e. a connected, undirected graph with no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. You are given a 0-indexed integer array vals of len">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2421. Number of Good Paths">
+<meta property="og:url" content="https://xunzhan.github.io/leetcode/2421-number-of-good-paths/index.html">
+<meta property="og:site_name" content="Xun">
+<meta property="og:description" content="Problems There is a tree (i.e. a connected, undirected graph with no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. You are given a 0-indexed integer array vals of len">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://xunzhan.github.io/images/leetcode/lc-2421-1.png">
+<meta property="og:image" content="https://xunzhan.github.io/images/leetcode/lc-2421-2.png">
+<meta property="article:published_time" content="2023-01-15T01:22:13.000Z">
+<meta property="article:modified_time" content="2023-01-15T06:43:42.874Z">
+<meta property="article:author" content="Xun">
+<meta property="article:tag" content="Tree">
+<meta property="article:tag" content="Union Find">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xunzhan.github.io/images/leetcode/lc-2421-1.png">
+
+
+<link rel="canonical" href="https://xunzhan.github.io/leetcode/2421-number-of-good-paths/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://xunzhan.github.io/leetcode/2421-number-of-good-paths/","path":"leetcode/2421-number-of-good-paths/","title":"2421. Number of Good Paths"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2421. Number of Good Paths | Xun</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Xun" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--blockquote-bg-color:#505050;--note-code-bg-color:#282828;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{background:0 0}button.darkmode-toggle{z-index:9999;opacity:.6}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Xun</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">得时无怠，功不唐捐。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-about-me-重帘"><a href="/about-me/" rel="section"><i class="fa fa-address-book fa-fw"></i>About Me 重帘</a></li>
+        <li class="menu-item menu-item-projects-轻舟"><a href="/projects/" rel="section"><i class="fa fa-server fa-fw"></i>Projects 轻舟</a></li>
+        <li class="menu-item menu-item-techblog-东风"><a href="/techblog/" rel="section"><i class="fa fa-pen fa-fw"></i>TechBlog 东风</a></li>
+        <li class="menu-item menu-item-leetcode-箭雨"><a href="/leetcode/" rel="section"><i class="fa fa-flask fa-fw"></i>Leetcode 箭雨</a></li>
+        <li class="menu-item menu-item-articles-惊梦"><a href="/articles/" rel="section"><i class="fa fa-coffee fa-fw"></i>Articles 惊梦</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>FindMore 明烛
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problems"><span class="nav-number">1.</span> <span class="nav-text">Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constraints"><span class="nav-number">3.</span> <span class="nav-text">Constraints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solutions"><span class="nav-number">4.</span> <span class="nav-text">Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DSU-Union-Find"><span class="nav-number">4.1.</span> <span class="nav-text">DSU (Union-Find)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Intuition"><span class="nav-number">4.1.1.</span> <span class="nav-text">Intuition</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Algorithm"><span class="nav-number">4.1.2.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Complexity"><span class="nav-number">4.1.3.</span> <span class="nav-text">Complexity</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Xun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/XunZhan" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;XunZhan" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+
+<div class="links-of-author site-overview-item animated">
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=4mg877YmkHfXKUO_KXVrETXyuFO4-k4iWazEQm2d21g&cl=ffffff&w=a">
+  </script>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/2421-number-of-good-paths/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2421. Number of Good Paths | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2421. Number of Good Paths
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-01-14 17:22:13 / Modified: 22:43:42" itemprop="dateCreated datePublished" datetime="2023-01-14T17:22:13-08:00">2023-01-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="Problems">Problems</h3>
+<p>There is a tree (i.e. a connected, undirected graph with no cycles) consisting of <code>n</code> nodes numbered from <code>0</code> to <code>n - 1</code> and exactly <code>n - 1</code> edges.</p>
+<p>You are given a 0-indexed integer array <code>vals</code> of length <code>n</code> where <code>vals[i]</code> denotes the value of the <code>ith</code> node. You are also given a 2D integer array <code>edges</code> where <code>edges[i] = [ai, bi]</code> denotes that there exists an undirected edge connecting nodes <code>ai</code> and <code>bi</code>.</p>
+<p>A good path is a simple path that satisfies the following conditions:</p>
+<ol>
+<li>The starting node and the ending node have the same value.</li>
+<li>All nodes between the starting node and the ending node have values less than or equal to the starting node (i.e. the starting node’s value should be the maximum value along the path).<br>
+Return the number of distinct good paths.</li>
+</ol>
+<p>Note that a path and its reverse are counted as the same path. For example, <code>0 -&gt; 1</code> is considered to be the same as <code>1 -&gt; 0</code>. A single node is also considered as a valid path.</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-of-good-paths/">Leetcode</a></p>
+<h3 id="Examples">Examples</h3>
+<p><img src="/images/leetcode/lc-2421-1.png" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Input: vals = [1,3,2,1,3], edges = [[0,1],[0,2],[2,3],[2,4]]</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: There are 5 good paths consisting of a single node.</span><br><span class="line">There is 1 additional good path: 1 -&gt; 0 -&gt; 2 -&gt; 4.</span><br><span class="line">(The reverse path 4 -&gt; 2 -&gt; 0 -&gt; 1 is treated as the same as 1 -&gt; 0 -&gt; 2 -&gt; 4.)</span><br><span class="line">Note that 0 -&gt; 2 -&gt; 3 is not a good path because vals[2] &gt; vals[0].</span><br></pre></td></tr></table></figure>
+<p><img src="/images/leetcode/lc-2421-2.png" alt=""></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: vals = [1,1,2,2,3], edges = [[0,1],[1,2],[2,3],[2,4]]</span><br><span class="line">Output: 7</span><br><span class="line">Explanation: There are 5 good paths consisting of a single node.</span><br><span class="line">There are 2 additional good paths: 0 -&gt; 1 and 2 -&gt; 3.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: vals = [1], edges = []</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: The tree consists of only one node, so there is one good path.</span><br></pre></td></tr></table></figure>
+<h3 id="Constraints">Constraints</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">n == vals.length</span><br><span class="line">1 &lt;= n &lt;= 3 * 104</span><br><span class="line">0 &lt;= vals[i] &lt;= 105</span><br><span class="line">edges.length == n - 1</span><br><span class="line">edges[i].length == 2</span><br><span class="line">0 &lt;= ai, bi &lt; n</span><br><span class="line">ai != bi</span><br><span class="line">edges represents a valid tree.</span><br></pre></td></tr></table></figure>
+<h3 id="Solutions">Solutions</h3>
+<h4 id="DSU-Union-Find">DSU (Union-Find)</h4>
+<h5 id="Intuition">Intuition</h5>
+<p>Firstly, we definitely can use BFS or BFS to traverse the tree and find the good paths. But the time complexity would be <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>N</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>, and this approach would indicate that the time limit has been exceeded (TLE).</p>
+<p>Let’s think of a faster way by making some observations.</p>
+<p>There is no point in traversing from a node to its neighbor where the <code>vals[neighbor] &gt; vals[node]</code>. It violates the good path constraints. So, for any node, the only nodes that matter are the ones that have values less than <code>vals[node]</code>. Intuitively, this does give some hints about sorting the nodes according to their values, starting with the smallest value first and then going to higher values.</p>
+<p>Let’s look at an example. Consider a node with the value <code>X</code> in a tree <code>T</code>. Let’s try to find the number of good paths that start and end with the value <code>X</code>. The nodes having values greater than <code>X</code> are of no use, so let’s remove them and form a new subgraph of all the nodes (and edges in <code>T</code> connected to these nodes) having values less than or equal to <code>X</code>. Note that the new subgraph could be a connected tree, or there could be multiple connected trees separated from each other.</p>
+<p>Let’s say we have two existing trees (components) <code>c1</code> and <code>c2</code> which are subgraphs of <code>T</code>.</p>
+<p>Imagine if there were 6 nodes with the value <code>X</code>, say <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code>, and <code>f</code>. We want to add all of them to the subgraph and find the number of good paths starting and ending with <code>X</code>. Let’s say <code>a</code>, <code>b</code>, and <code>c</code> connect with some nodes in <code>c1</code>. Nodes <code>d</code> and <code>e</code> connect with some nodes in <code>c2</code>. Node <code>f</code> does not connect with any existing component and creates a new component <code>c3</code> with just the node <code>f</code>.</p>
+<p>Let’s compute the number of good paths. In component <code>c1</code>, if we start with node a we get three good paths. The <code>a</code> node itself as well as the paths from <code>a</code> to <code>b</code> and <code>a</code> to <code>c</code>. For node <code>b</code>, we have the node itself and the path to <code>c</code> (the path to a is already covered). And for node <code>c</code>, we just have the node itself. So, there are six good paths formed in component <code>c1</code>. What if there were <code>N</code> nodes in place of three? Starting from the first node, we would have <code>N</code> good paths: the node itself and <code>N - 1</code> paths to other nodes with the same value. For the second node, we would have <code>N - 1</code> options (since the first node is already covered), and so on. So, if N nodes having the same value connect in a component, the good paths would be <code>N + N - 1 + N - 2 + .. + 1 = N * (N + 1) / 2</code>.</p>
+<p>Similarly, we can count three good paths forming in component <code>c2</code>. We can also use the same formula with <code>N = 2</code> which gives <code>(2 * (2 + 1) / 2) = 3</code> good paths.</p>
+<p>For the component <code>c3</code>, there is one good path for node <code>f</code>, the node itself. It needs nodes with higher values to connect to other nodes in the original tree <code>T</code>, which do not lead to the formation of a good path. Here, <code>N = 1</code>, so using the formula gives us one good path.</p>
+<p>Having added all the nodes with the value <code>X</code>, how can we compute the good paths with starting nodes having a value <code>X + 1</code> (or next higher value)? To the subgraph formed above, we add all the nodes having the value <code>X + 1</code> and repeat the same process to compute all the good paths starting with the value <code>X + 1</code>. The nodes with the value <code>X</code> can serve as intermediate nodes in a good path starting and ending with the value <code>X + 1</code>.</p>
+<p>We can extend the above to start with value <code>1</code> first, then add nodes with value <code>2</code>, then add nodes with value <code>3</code>, and so on, to the subgraph formed in the previous iteration. We should begin from the lowest and move to the higher values of the nodes. For each value, we should add all the nodes with the same value to the existing subgraph and calculate the number of good paths formed in each component. This way, we build the complete tree at the end by adding nodes of the same value at each step.</p>
+<p>This approach can be implemented with a disjoint-set data structure, also called a union-find data structure. It is a data structure that stores a collection of disjoint (non-overlapping) sets. Equivalently, it stores a partition of a set into disjoint subsets. It provides operations for adding new sets, merging sets (replacing them by their union), and finding a representative member of a set. It implements two useful operations:</p>
+<p>a) <code>Find</code>: Determine which subset a particular element is in. This can be used to determine if two elements are in the same subset. b) <code>Union</code>: Join two subsets into a single subset.</p>
+<h5 id="Algorithm">Algorithm</h5>
+<p>In this approach, we will create a map, say <code>valuesToNodes</code> to map a value to all the nodes that have that value. The map is sorted with respect to the keys, which are the node values. We iterate over every <code>value, nodes[]</code> entry in <code>valuesToNodes</code>.</p>
+<p>For each node in <code>nodes[]</code>, we check all <code>neighbor</code>. If <code>vals[node] &gt;= vals[neighbor]</code>, <code>neighbor</code> is already covered, and it is a node in the subgraph. It can be used as an intermediate node in a good path if formed using it. We perform <code>union (node, neighbor)</code> to add node to the current subgraph. Otherwise, if <code>vals[node] &lt; vals[neighbor]</code>, the node is not added to the existing components, and it creates a new component with the node itself.</p>
+<p>The next step is to compute the number of nodes with the same value added to each component and use the above formula to count the number of good paths. We can do this by using a map, say <code>groups</code> where the key is the unique id of the component (or tree) and the value is the count of nodes from <code>nodes[]</code> in that component. Iterate over all the <code>nodes[]</code> and for each node, we increment <code>group[find(node)]</code> by one. This way, we have the count of nodes in each component.</p>
+<p>We iterate over the group map, and for each entry <code>id, size</code>, we add <code>size * (size + 1) / 2</code> to the count of good paths.</p>
+<div class="tabs" id="solutions-dsu"><ul class="nav-tabs"><li class="tab active"><a href="#solutions-dsu-1">CPP</a></li><li class="tab"><a href="#solutions-dsu-2">JAVA</a></li></ul><div class="tab-content"><div class="tab-pane active" id="solutions-dsu-1"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; parent, rank;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">UnionFind</span>(<span class="type">int</span> size) &#123;</span><br><span class="line">        parent.<span class="built_in">resize</span>(size);</span><br><span class="line">        rank.<span class="built_in">resize</span>(size, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            parent[i] = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (parent[x] != x) parent[x] = <span class="built_in">find</span>(parent[x]);</span><br><span class="line">        <span class="keyword">return</span> parent[x];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">union_set</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> xset = <span class="built_in">find</span>(x), yset = <span class="built_in">find</span>(y);</span><br><span class="line">        <span class="keyword">if</span> (xset == yset) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rank[xset] &lt; rank[yset]) &#123;</span><br><span class="line">            parent[xset] = yset;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rank[xset] &gt; rank[yset]) &#123;</span><br><span class="line">            parent[yset] = xset;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            parent[yset] = xset;</span><br><span class="line">            rank[xset]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">numberOfGoodPaths</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; vals, vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; edges)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = vals.<span class="built_in">size</span>();</span><br><span class="line">        vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">adj</span>(n);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; edge : edges) &#123;</span><br><span class="line">            adj[edge[<span class="number">0</span>]].<span class="built_in">push_back</span>(edge[<span class="number">1</span>]);</span><br><span class="line">            adj[edge[<span class="number">1</span>]].<span class="built_in">push_back</span>(edge[<span class="number">0</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// Mapping from value to all the nodes having the same value in non-descending order of values.</span></span><br><span class="line">        map&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;&gt; valuesToNodes;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> node = <span class="number">0</span>; node &lt; n; node++) &#123;</span><br><span class="line">            valuesToNodes[vals[node]].<span class="built_in">push_back</span>(node);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function">UnionFind <span class="title">dsu</span><span class="params">(n)</span></span>;</span><br><span class="line">        <span class="type">int</span> goodPaths = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Iterate over all the nodes with the same value in sorted order, starting from the lowest</span></span><br><span class="line">        <span class="comment">// value.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; [value, nodes] : valuesToNodes) &#123;</span><br><span class="line">            <span class="comment">// For every node in nodes, combine the sets of the node and its neighbors into one set.</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> node : nodes) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> neighbor : adj[node]) &#123;</span><br><span class="line">                    <span class="comment">// Only choose neighbors with a smaller value, as there is no point in</span></span><br><span class="line">                    <span class="comment">// traversing to other neighbors.</span></span><br><span class="line">                    <span class="keyword">if</span> (vals[node] &gt;= vals[neighbor]) &#123;</span><br><span class="line">                        dsu.<span class="built_in">union_set</span>(node, neighbor);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// Map to compute the number of nodes under observation (with the same values) in each</span></span><br><span class="line">            <span class="comment">// of the sets.</span></span><br><span class="line">            unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; group;</span><br><span class="line">            <span class="comment">// Iterate over all the nodes. Get the set of each node and increase the count of the</span></span><br><span class="line">            <span class="comment">// set by 1.</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> u : nodes) &#123;</span><br><span class="line">                group[dsu.<span class="built_in">find</span>(u)]++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// For each set of &quot;size&quot;, add size * (size + 1) / 2 to the number of goodPaths.</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; [_, size] : group) &#123;</span><br><span class="line">                goodPaths += (size * (size + <span class="number">1</span>) / <span class="number">2</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> goodPaths;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="solutions-dsu-2"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line">    <span class="type">int</span>[] parent;</span><br><span class="line">    <span class="type">int</span>[] rank;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">UnionFind</span><span class="params">(<span class="type">int</span> size)</span> &#123;</span><br><span class="line">        parent = <span class="keyword">new</span> <span class="title class_">int</span>[size];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size; i++)</span><br><span class="line">            parent[i] = i;</span><br><span class="line">        rank = <span class="keyword">new</span> <span class="title class_">int</span>[size];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">find</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (parent[x] != x)</span><br><span class="line">            parent[x] = find(parent[x]);</span><br><span class="line">        <span class="keyword">return</span> parent[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">union_set</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">xset</span> <span class="operator">=</span> find(x), yset = find(y);</span><br><span class="line">        <span class="keyword">if</span> (xset == yset) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rank[xset] &lt; rank[yset]) &#123;</span><br><span class="line">            parent[xset] = yset;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rank[xset] &gt; rank[yset]) &#123;</span><br><span class="line">            parent[yset] = xset;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            parent[yset] = xset;</span><br><span class="line">            rank[xset]++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">numberOfGoodPaths</span><span class="params">(<span class="type">int</span>[] vals, <span class="type">int</span>[][] edges)</span> &#123;</span><br><span class="line">        Map&lt;Integer, List&lt;Integer&gt;&gt; adj = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span>[] edge : edges) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> edge[<span class="number">0</span>], b = edge[<span class="number">1</span>];</span><br><span class="line">            adj.computeIfAbsent(a, value -&gt; <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;()).add(b);</span><br><span class="line">            adj.computeIfAbsent(b, value -&gt; <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;()).add(a);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> vals.length;</span><br><span class="line">        <span class="comment">// Mapping from value to all the nodes having the same value in sorted order of</span></span><br><span class="line">        <span class="comment">// values.</span></span><br><span class="line">        TreeMap&lt;Integer, List&lt;Integer&gt;&gt; valuesToNodes = <span class="keyword">new</span> <span class="title class_">TreeMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            valuesToNodes.computeIfAbsent(vals[i], value -&gt; <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;()).add(i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">UnionFind</span> <span class="variable">dsu</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UnionFind</span>(n);</span><br><span class="line">        <span class="type">int</span> <span class="variable">goodPaths</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Iterate over all the nodes with the same value in sorted order, starting from</span></span><br><span class="line">        <span class="comment">// the lowest value.</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> value : valuesToNodes.keySet()) &#123;</span><br><span class="line">            <span class="comment">// For every node in nodes, combine the sets of the node and its neighbors into</span></span><br><span class="line">            <span class="comment">// one set.</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> node : valuesToNodes.get(value)) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!adj.containsKey(node))</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> neighbor : adj.get(node)) &#123;</span><br><span class="line">                    <span class="comment">// Only choose neighbors with a smaller value, as there is no point in</span></span><br><span class="line">                    <span class="comment">// traversing to other neighbors.</span></span><br><span class="line">                    <span class="keyword">if</span> (vals[node] &gt;= vals[neighbor]) &#123;</span><br><span class="line">                        dsu.union_set(node, neighbor);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// Map to compute the number of nodes under observation (with the same values)</span></span><br><span class="line">            <span class="comment">// in each of the sets.</span></span><br><span class="line">            Map&lt;Integer, Integer&gt; group = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">            <span class="comment">// Iterate over all the nodes. Get the set of each node and increase the count</span></span><br><span class="line">            <span class="comment">// of the set by 1.</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> u : valuesToNodes.get(value)) &#123;</span><br><span class="line">                group.put(dsu.find(u), group.getOrDefault(dsu.find(u), <span class="number">0</span>) + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// For each set of &quot;size&quot;, add size * (size + 1) / 2 to the number of goodPaths.</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> key : group.keySet()) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> group.get(key);</span><br><span class="line">                goodPaths += size * (size + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> goodPaths;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+<h5 id="Complexity">Complexity</h5>
+<p>Here, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> is the number of nodes.<br>
+Time: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo>⋅</mo><mi>l</mi><mi>o</mi><mi>g</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N \cdot log(N))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">))</span></span></span></span><br>
+Space: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Tree/" rel="tag"># Tree</a>
+              <a href="/tags/Union-Find/" rel="tag"># Union Find</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/leetcode/1061-lexicographically-smallest-equivalent-string/" rel="prev" title="1061-lexicographically-smallest-equivalent-string">
+                  <i class="fa fa-chevron-left"></i> 1061-lexicographically-smallest-equivalent-string
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/leetcode/918-maximum-sum-circular-subarray/" rel="next" title="918. Maximum Sum Circular Subarray">
+                  918. Maximum Sum Circular Subarray <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xun</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
+
+
+<script src="/plugins/darkmode-js/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#222',
+  buttonColorLight: '#222',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: false
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>

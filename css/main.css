@@ -4,6 +4,8 @@
   --card-bg-color: #f5f5f5;
   --text-color: #555;
   --blockquote-color: #666;
+  --blockquote-bg-color: #fcfcfc;
+  --note-code-bg-color: #e6ebf1;
   --link-color: #555;
   --link-hover-color: #222;
   --brand-color: #fff;
@@ -18,10 +20,10 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #fafafa;
-  --highlight-foreground: #383a42;
-  --highlight-gutter-background: #e6e6e7;
-  --highlight-gutter-foreground: #4b4d54;
+  --highlight-background: #f8f8f8;
+  --highlight-foreground: #383838;
+  --highlight-gutter-background: #eee;
+  --highlight-gutter-foreground: #414141;
   color-scheme: light;
 }
 html {
@@ -173,8 +175,8 @@ template {
   display: none;
 }
 ::selection {
-  background: #262a30;
-  color: #eee;
+  background: #555;
+  color: #f5f5f5;
 }
 html,
 body {
@@ -252,8 +254,8 @@ hr {
 }
 blockquote {
   border-left: 4px solid #ddd;
-  background-color: #fcfcfc;
   color: var(--blockquote-color);
+  background-color: var(--blockquote-bg-color);
   margin: 0;
   padding: 0 15px;
 }
@@ -363,7 +365,13 @@ td {
   top: -5px;
   transform: rotate(-45deg);
 }
-pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#a0a1a7;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e45649}.hljs-literal{color:#0184bb}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#50a14f}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#4078f2}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#c18401}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
+/*!
+  Theme: Default Light
+  Author: Chris Kempson (http://chriskempson.com)
+  License: ~ MIT (or more permissive) [via base16-schemes-source]
+  Maintainer: @highlightjs/core-team
+  Version: 2021.09.0
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#383838;background:#f8f8f8}.hljs ::selection,.hljs::selection{background-color:#d8d8d8;color:#383838}.hljs-comment{color:#b8b8b8}.hljs-tag{color:#585858}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#383838}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#ab4642}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#dc9656}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#f7ca88}.hljs-strong{font-weight:700;color:#f7ca88}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#a1b56c}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#86c1b9}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#7cafc2}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#ba8baf}.hljs-emphasis{color:#ba8baf;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#a16946}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
 .highlight:hover .copy-btn,
 pre:hover .copy-btn {
   opacity: 1;
@@ -766,7 +774,11 @@ pre code {
 .post-body .note {
   border-radius: 3px;
   margin-bottom: 20px;
+  padding: 1em;
   position: relative;
+  background: #f9f9f9;
+  border: initial;
+  border-left: 3px solid #eee;
 }
 .post-body .note summary {
   cursor: pointer;
@@ -803,7 +815,17 @@ pre code {
 .post-body .note img:last-child {
   margin-bottom: 0;
 }
+.post-body .note:not(.no-icon) {
+  padding-left: 2.5em;
+}
+.post-body .note:not(.no-icon)::before {
+  font-size: 1.5em;
+  left: 0.3em;
+  position: absolute;
+  top: calc(50% - 0.8em);
+}
 .post-body .note.default {
+  background: #f7f7f7;
   border-left-color: #777;
 }
 .post-body .note.default h2,
@@ -813,7 +835,14 @@ pre code {
 .post-body .note.default h6 {
   color: #777;
 }
+.post-body .note.default:not(.no-icon)::before {
+  content: '\f0a9';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #777;
+}
 .post-body .note.primary {
+  background: #f5f0fa;
   border-left-color: #6f42c1;
 }
 .post-body .note.primary h2,
@@ -823,7 +852,14 @@ pre code {
 .post-body .note.primary h6 {
   color: #6f42c1;
 }
+.post-body .note.primary:not(.no-icon)::before {
+  content: '\f055';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #6f42c1;
+}
 .post-body .note.info {
+  background: #eef7fa;
   border-left-color: #428bca;
 }
 .post-body .note.info h2,
@@ -833,7 +869,14 @@ pre code {
 .post-body .note.info h6 {
   color: #428bca;
 }
+.post-body .note.info:not(.no-icon)::before {
+  content: '\f05a';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #428bca;
+}
 .post-body .note.success {
+  background: #eff8f0;
   border-left-color: #5cb85c;
 }
 .post-body .note.success h2,
@@ -843,7 +886,14 @@ pre code {
 .post-body .note.success h6 {
   color: #5cb85c;
 }
+.post-body .note.success:not(.no-icon)::before {
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #5cb85c;
+}
 .post-body .note.warning {
+  background: #fdf8ea;
   border-left-color: #f0ad4e;
 }
 .post-body .note.warning h2,
@@ -853,7 +903,14 @@ pre code {
 .post-body .note.warning h6 {
   color: #f0ad4e;
 }
+.post-body .note.warning:not(.no-icon)::before {
+  content: '\f06a';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #f0ad4e;
+}
 .post-body .note.danger {
+  background: #fcf1f2;
   border-left-color: #d9534f;
 }
 .post-body .note.danger h2,
@@ -861,6 +918,166 @@ pre code {
 .post-body .note.danger h4,
 .post-body .note.danger h5,
 .post-body .note.danger h6 {
+  color: #d9534f;
+}
+.post-body .note.danger:not(.no-icon)::before {
+  content: '\f056';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #d9534f;
+}
+.post-body .note-code {
+  margin-bottom: 20px;
+  padding: 0em;
+  position: relative;
+  background: #f9f9f9;
+  border: initial;
+}
+.post-body .note-code summary {
+  cursor: pointer;
+  outline: 0;
+  color: #728c9f;
+  padding-left: 10px;
+}
+.post-body .note-code summary p {
+  display: inline;
+}
+.post-body .note-code h2,
+.post-body .note-code h3,
+.post-body .note-code h4,
+.post-body .note-code h5,
+.post-body .note-code h6 {
+  border-bottom: initial;
+  margin: 0;
+  padding-top: 0;
+}
+.post-body .note-code p:first-child,
+.post-body .note-code ul:first-child,
+.post-body .note-code ol:first-child,
+.post-body .note-code table:first-child,
+.post-body .note-code pre:first-child,
+.post-body .note-code blockquote:first-child,
+.post-body .note-code img:first-child {
+  margin-top: 0;
+}
+.post-body .note-code p:last-child,
+.post-body .note-code ul:last-child,
+.post-body .note-code ol:last-child,
+.post-body .note-code table:last-child,
+.post-body .note-code pre:last-child,
+.post-body .note-code blockquote:last-child,
+.post-body .note-code img:last-child {
+  margin-bottom: 0;
+}
+.post-body .note-code:not(.no-icon) {
+  padding-left: 2.5em;
+}
+.post-body .note-code:not(.no-icon)::before {
+  font-size: 1.5em;
+  left: 0.3em;
+  position: absolute;
+  top: calc(50% - 1em);
+}
+.post-body .note-code.default {
+  background: var(--note-code-bg-color);
+  border-left-color: #777;
+}
+.post-body .note-code.default h2,
+.post-body .note-code.default h3,
+.post-body .note-code.default h4,
+.post-body .note-code.default h5,
+.post-body .note-code.default h6 {
+  color: #777;
+}
+.post-body .note-code.default:not(.no-icon)::before {
+  content: '\f0a9';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #777;
+}
+.post-body .note-code.primary {
+  background: var(--note-code-bg-color);
+  border-left-color: #6f42c1;
+}
+.post-body .note-code.primary h2,
+.post-body .note-code.primary h3,
+.post-body .note-code.primary h4,
+.post-body .note-code.primary h5,
+.post-body .note-code.primary h6 {
+  color: #6f42c1;
+}
+.post-body .note-code.primary:not(.no-icon)::before {
+  content: '\f055';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #6f42c1;
+}
+.post-body .note-code.info {
+  background: var(--note-code-bg-color);
+  border-left-color: #428bca;
+}
+.post-body .note-code.info h2,
+.post-body .note-code.info h3,
+.post-body .note-code.info h4,
+.post-body .note-code.info h5,
+.post-body .note-code.info h6 {
+  color: #428bca;
+}
+.post-body .note-code.info:not(.no-icon)::before {
+  content: '\f05a';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #428bca;
+}
+.post-body .note-code.success {
+  background: var(--note-code-bg-color);
+  border-left-color: #5cb85c;
+}
+.post-body .note-code.success h2,
+.post-body .note-code.success h3,
+.post-body .note-code.success h4,
+.post-body .note-code.success h5,
+.post-body .note-code.success h6 {
+  color: #5cb85c;
+}
+.post-body .note-code.success:not(.no-icon)::before {
+  content: '\f058';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #5cb85c;
+}
+.post-body .note-code.warning {
+  background: var(--note-code-bg-color);
+  border-left-color: #f0ad4e;
+}
+.post-body .note-code.warning h2,
+.post-body .note-code.warning h3,
+.post-body .note-code.warning h4,
+.post-body .note-code.warning h5,
+.post-body .note-code.warning h6 {
+  color: #f0ad4e;
+}
+.post-body .note-code.warning:not(.no-icon)::before {
+  content: '\f06a';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #f0ad4e;
+}
+.post-body .note-code.danger {
+  background: var(--note-code-bg-color);
+  border-left-color: #d9534f;
+}
+.post-body .note-code.danger h2,
+.post-body .note-code.danger h3,
+.post-body .note-code.danger h4,
+.post-body .note-code.danger h5,
+.post-body .note-code.danger h6 {
+  color: #d9534f;
+}
+.post-body .note-code.danger:not(.no-icon)::before {
+  content: '\f056';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
   color: #d9534f;
 }
 .post-body .tabs {

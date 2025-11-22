@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-code.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-code-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-code-16x16.png">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"xunzhan.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap" rel="stylesheet">
+
+
+<script src="/plugins/live2d-widget/autoload.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/plugins/typed.js-2.0.12/typed.min.js"></script>
+    <meta name="description" content="Problems Given an integer array nums and an integer k, return the number of non-empty subarrays that have a sum divisible by k. A subarray is a contiguous part of an array. Leetcode Examples 1234Input">
+<meta property="og:type" content="article">
+<meta property="og:title" content="974. Subarray Sums Divisible by K">
+<meta property="og:url" content="https://xunzhan.github.io/leetcode/974-subarray-sums-divisible-by-k/index.html">
+<meta property="og:site_name" content="Xun">
+<meta property="og:description" content="Problems Given an integer array nums and an integer k, return the number of non-empty subarrays that have a sum divisible by k. A subarray is a contiguous part of an array. Leetcode Examples 1234Input">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://xunzhan.github.io/images/leetcode/lc-974-1.png">
+<meta property="og:image" content="https://xunzhan.github.io/images/leetcode/lc-974-2.png">
+<meta property="article:published_time" content="2023-01-19T05:12:08.000Z">
+<meta property="article:modified_time" content="2023-06-20T08:16:20.881Z">
+<meta property="article:author" content="Xun">
+<meta property="article:tag" content="Array">
+<meta property="article:tag" content="Prefix Sum">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xunzhan.github.io/images/leetcode/lc-974-1.png">
+
+
+<link rel="canonical" href="https://xunzhan.github.io/leetcode/974-subarray-sums-divisible-by-k/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://xunzhan.github.io/leetcode/974-subarray-sums-divisible-by-k/","path":"leetcode/974-subarray-sums-divisible-by-k/","title":"974. Subarray Sums Divisible by K"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>974. Subarray Sums Divisible by K | Xun</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Xun" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--blockquote-bg-color:#505050;--note-code-bg-color:#282828;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{background:0 0}button.darkmode-toggle{z-index:9999;opacity:.6}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Xun</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">得时无怠，功不唐捐。</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-about-me-重帘"><a href="/about-me/" rel="section"><i class="fa fa-address-book fa-fw"></i>About Me 重帘</a></li>
+        <li class="menu-item menu-item-projects-轻舟"><a href="/projects/" rel="section"><i class="fa fa-server fa-fw"></i>Projects 轻舟</a></li>
+        <li class="menu-item menu-item-techblog-东风"><a href="/techblog/" rel="section"><i class="fa fa-pen fa-fw"></i>TechBlog 东风</a></li>
+        <li class="menu-item menu-item-leetcode-箭雨"><a href="/leetcode/" rel="section"><i class="fa fa-flask fa-fw"></i>Leetcode 箭雨</a></li>
+        <li class="menu-item menu-item-articles-惊梦"><a href="/articles/" rel="section"><i class="fa fa-coffee fa-fw"></i>Articles 惊梦</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>FindMore 明烛
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problems"><span class="nav-number">1.</span> <span class="nav-text">Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">2.</span> <span class="nav-text">Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constraints"><span class="nav-number">3.</span> <span class="nav-text">Constraints</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Solutions"><span class="nav-number">4.</span> <span class="nav-text">Solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Prefix-Sum"><span class="nav-number">4.1.</span> <span class="nav-text">Prefix Sum</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Intuition"><span class="nav-number">4.1.1.</span> <span class="nav-text">Intuition</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Algorithm"><span class="nav-number">4.1.2.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Complexity"><span class="nav-number">4.1.3.</span> <span class="nav-text">Complexity</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Xun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/XunZhan" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;XunZhan" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+
+<div class="links-of-author site-overview-item animated">
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=4mg877YmkHfXKUO_KXVrETXyuFO4-k4iWazEQm2d21g&cl=ffffff&w=a">
+  </script>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://xunzhan.github.io/leetcode/974-subarray-sums-divisible-by-k/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Xun">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xun">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="974. Subarray Sums Divisible by K | Xun">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          974. Subarray Sums Divisible by K
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-01-18 21:12:08" itemprop="dateCreated datePublished" datetime="2023-01-18T21:12:08-08:00">2023-01-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-06-20 01:16:20" itemprop="dateModified" datetime="2023-06-20T01:16:20-07:00">2023-06-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Leetcode/" itemprop="url" rel="index"><span itemprop="name">Leetcode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="Problems">Problems</h3>
+<p>Given an integer array <code>nums</code> and an integer <code>k</code>, return the number of non-empty subarrays that have a sum divisible by <code>k</code>. A subarray is a contiguous part of an array.</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/subarray-sums-divisible-by-k/">Leetcode</a></p>
+<h3 id="Examples">Examples</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [4,5,0,-2,-3,1], k = 5</span><br><span class="line">Output: 7</span><br><span class="line">Explanation: There are 7 subarrays with a sum divisible by k = 5:</span><br><span class="line">[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [5], k = 9</span><br><span class="line">Output: 0</span><br></pre></td></tr></table></figure>
+<h3 id="Constraints">Constraints</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= nums.length &lt;= 3 * 10^4</span><br><span class="line">-10^4 &lt;= nums[i] &lt;= 10^4</span><br><span class="line">2 &lt;= k &lt;= 10^4</span><br></pre></td></tr></table></figure>
+<h3 id="Solutions">Solutions</h3>
+<h4 id="Prefix-Sum">Prefix Sum</h4>
+<h5 id="Intuition">Intuition</h5>
+<p>The problem is based on the concept of using prefix sums to compute the total number of subarrays that are divisible by <code>k</code>. A prefix sum array for <code>nums</code> is another array <code>prefixSum</code> of the same size, such that the value of <code>prefixSum[i]</code> is the sum of all elements of the <code>nums</code> array from index <code>0</code> to index <code>i</code>, i.e., <code>nums[0] + nums[1] + nums[2] + . . . + nums[i]</code>.</p>
+<p>The sum of the subarray <code>i + 1</code> to <code>j</code> (inclusive) is computed by <code>prefixSum[j] - prefixSum[i]</code>. Using this, we can count the number of pairs that exist for every pair <code>(i, j)</code> where <code>i &lt; j</code> and <code>(prefixSum[j] - prefix[i]) % k = 0</code>. There are <code>n * (n - 1) / 2</code> pairs for an array of length <code>n</code>. As a result, while this will provide the correct answer for every test case, it will take <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span> time, indicating that the time limit has been exceeded (TLE).</p>
+<p>Let’s try to use the information with respect to the remainders of every prefix sum and try to optimize the above approach.</p>
+<p>As stated previously, our task is to determine the number of pairs <code>(i, j)</code> where <code>i &lt; j</code> and <code>(prefixSum[j] - prefix[i]) % k = 0</code>. This equality can only be true if <code>prefixSum[i] % k = prefixSum[j] % k</code>. We will demonstrate this property.</p>
+<p>We can express any <code>number</code> as <code>number = divisor × quotient + remainder</code>. For example, <code>13</code> when divided by <code>3</code> can be written as <code>13 = 3 * 4 + 1</code>. So we can express:</p>
+<ol>
+<li><code>prefixSum[i]</code> as <code>prefixSum[i] = A * k + R0</code> where <code>A</code> is the quotient and <code>R0</code> is the remainder when divided by <code>k</code>.<br>
+b) Similarly, <code>prefixSum[j] = B * k + R1</code> where <code>B</code> is the quotient and <code>R1</code> is the remainder when divided by <code>k</code>.</li>
+</ol>
+<p>We can write, <code>prefixSum[j] - prefixSum[i] = k * (B - A) + (R1 - R0)</code>. The first term <code>(k * (B - A))</code> is divisible by <code>k</code>, so for the entire expression to be divisible by <code>k</code>, <code>R1 - R0</code> must also be divisible by <code>k</code>. This gives us an equation <code>R1 - R0 = C * k</code>, where <code>C</code> is some integer. Rearranging it yields <code>R1 = C * k + R0</code>. Because the values of <code>R0</code> and <code>R1</code> will be between <code>0</code> and <code>k - 1</code>, <code>R1</code> cannot be greater than <code>k</code>. So <strong>the only possible value for <code>C</code> is <code>0</code>, leading to <code>R0 = R1</code></strong>, which proves the above property. If <code>C &gt; 0</code>, then the RHS would be at least <code>k</code>, but as stated the LHS (R1) is between <code>0</code> and <code>k - 1</code>.</p>
+<p>Here are two visual examples showing the calculations:<br>
+<img src="/images/leetcode/lc-974-1.png" alt=""><br>
+<img src="/images/leetcode/lc-974-2.png" alt=""></p>
+<p>Let’s say a subarray ranging from index <code>0</code> to index <code>j</code> has a remainder <code>R</code> when the sum of its elements (prefix sum) is divided by <code>k</code>. Our task now becomes to figure out how many subarrays <code>0..i</code> exist with <code>i &lt; j</code> having the same remainder <code>R</code> when their prefix sum is divided by <code>k</code>. So, we need to maintain the count of remainders while moving in the array.</p>
+<p>We start with an integer <code>prefixMod = 0</code> to store the remainder when the sum of the elements of a subarray that start from index <code>0</code> is divided by <code>k</code>. We do not need the prefix sum array, since we only need to maintain the count of each remainder <code>(0 to k - 1)</code> so far. To maintain the count of the remainders, we initialize an array <code>modGroups[k]</code>, where <code>modGroups[R]</code> stores the number of times R was the remainder so far.</p>
+<p>We iterate over all the elements starting from index <code>0</code>. We set <code>prefixMod = (prefixMod + num[i] % k + k) % k</code> for each element at index <code>i</code> to find the remainder of the sum of the subarray ranging from index <code>0</code> to index <code>i</code> when divided by <code>k</code>. The <code>+ k</code> is needed to handle negative numbers. We can then add the number of subarrays previously seen having the same remainder prefixMod to cancel out the remainder. The total number of these arrays is in <code>modGroups[prefixMod]</code>. In the end, we increment the count of <code>modGroups[R]</code> by one to include the current subarray with the remainder <code>R</code> for future matches.</p>
+<p>Till now, we chose some previous subarrays (if they exist) to delete the remainder from the existing array formed till index <code>i</code> when the sum of its elements is divided by <code>k</code>. What if the sum of the elements of the array till index <code>i</code> is divisible by <code>k</code> and we don’t need another subarray to delete the remainder?</p>
+<p>To count the complete subarray from index <code>0</code> to index <code>i</code>, we also initialize <code>modGroups[0] = 1</code> at the start so that if a complete subarray from index <code>0</code> to the current index is divisible by <code>k</code>, we include the complete array in the count of <code>modGroups[0]</code>. It is set to start with 1 to cover the complete subarray case. For example, let’s assume we are index <code>i</code>. Say, we have previously encountered three subarrays from index <code>0</code> to some index <code>j</code> where <code>j &lt; i</code> that were divisible by <code>k</code>. Now, assume the sum of elements in the array up to index <code>i</code> is also divisible by <code>k</code>. So, we will have 4 options to form a subarray ending at index <code>i</code> that is divisible by <code>k</code>. Three of these come from choosing the subarrays (resulting in subarray <code>j + 1, .., i</code> that is divisble by <code>k</code>) that were divisble by <code>k</code> and one comes from choosing the complete subarray starting from index <code>0</code> till index <code>i</code>.</p>
+<h5 id="Algorithm">Algorithm</h5>
+<div class="tabs" id="solutions-1"><ul class="nav-tabs"><li class="tab active"><a href="#solutions-1-1">CPP</a></li><li class="tab"><a href="#solutions-1-2">JAVA</a></li></ul><div class="tab-content"><div class="tab-pane active" id="solutions-1-1"><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">subarraysDivByK</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = nums.<span class="built_in">size</span>();</span><br><span class="line">        <span class="type">int</span> prefixMod = <span class="number">0</span>, result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// There are k mod groups 0...k-1.</span></span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">modGroups</span><span class="params">(k)</span></span>;</span><br><span class="line">        modGroups[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : nums) &#123;</span><br><span class="line">            <span class="comment">// Take modulo twice to avoid negative remainders.</span></span><br><span class="line">            prefixMod = (prefixMod + num % k + k) % k;</span><br><span class="line">            <span class="comment">// Add the count of subarrays that have the same remainder as the current</span></span><br><span class="line">            <span class="comment">// one to cancel out the remainders.</span></span><br><span class="line">            result += modGroups[prefixMod];</span><br><span class="line">            modGroups[prefixMod]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="solutions-1-2"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">subarraysDivByK</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">prefixMod</span> <span class="operator">=</span> <span class="number">0</span>, result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// There are k mod groups 0...k-1.</span></span><br><span class="line">        <span class="type">int</span>[] modGroups = <span class="keyword">new</span> <span class="title class_">int</span>[k];</span><br><span class="line">        modGroups[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num: nums) &#123;</span><br><span class="line">            <span class="comment">// Take modulo twice to avoid negative remainders.</span></span><br><span class="line">            prefixMod = (prefixMod + num % k + k) % k;</span><br><span class="line">            <span class="comment">// Add the count of subarrays that have the same remainder as the current</span></span><br><span class="line">            <span class="comment">// one to cancel out the remainders.</span></span><br><span class="line">            result += modGroups[prefixMod];</span><br><span class="line">            modGroups[prefixMod]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></div></div>
+<h5 id="Complexity">Complexity</h5>
+<p>Here, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> is the length of nums and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> is the given integer.<br>
+Time: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo>+</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N+K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mclose">)</span></span></span></span><br>
+We require <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mclose">)</span></span></span></span> time to initialize the modGroups array.<br>
+We also require <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(N)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mclose">)</span></span></span></span> time to iterate over all the elements of the nums array. The computation of the prefixSum and the calculation of the subarrays divisible by k take <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> time for each index of the array.<br>
+Space: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(K)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mclose">)</span></span></span></span></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Array/" rel="tag"># Array</a>
+              <a href="/tags/Prefix-Sum/" rel="tag"># Prefix Sum</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/leetcode/918-maximum-sum-circular-subarray/" rel="prev" title="918. Maximum Sum Circular Subarray">
+                  <i class="fa fa-chevron-left"></i> 918. Maximum Sum Circular Subarray
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/articles/2022-annual-report/" rel="next" title="2022 年度报告">
+                  2022 年度报告 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xun</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
+
+
+<script src="/plugins/darkmode-js/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#222',
+  buttonColorLight: '#222',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: false
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>

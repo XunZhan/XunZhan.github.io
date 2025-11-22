@@ -6,10 +6,9 @@
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/code-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/code-16x16.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-code.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-code-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-code-16x16.png">
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -33,9 +32,7 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-
+<script src="/plugins/typed.js-2.0.12/typed.min.js"></script>
     <meta name="description" content="Live2D Widget       特性 Feature 在网页中添加 Live2D 看板娘。兼容 PJAX，支持无刷新加载。 Add Live2D widget to web page. Compatible with PJAX. 警告：本项目使用了大量 ES6 语法，不支持 IE 11 等老旧浏览器。 WARNING: This project does not support legac">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xun">
@@ -80,7 +77,7 @@
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
 <link rel="alternate" href="/atom.xml" title="Xun" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--blockquote-bg-color:#505050;--note-code-bg-color:#282828;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{background:0 0}button.darkmode-toggle{z-index:9999;opacity:.6}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style><link rel="stylesheet" href="/css/prism.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -192,7 +189,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">49</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -204,7 +201,7 @@
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -216,6 +213,12 @@
   </div>
 
 
+
+
+<div class="links-of-author site-overview-item animated">
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=4mg877YmkHfXKUO_KXVrETXyuFO4-k4iWazEQm2d21g&cl=ffffff&w=a">
+  </script>
+</div>
 
         </div>
       </div>
@@ -334,7 +337,7 @@ Font Awesome (v4 or v5) is required for this plugin. Take Font Awesome v4 as an 
 <strong>警告：作者不对包括但不限于 <code>waifu-tips.js</code> 和 <code>waifu-tips.json</code> 文件中的内容负责，请自行确保它们是合适的。</strong></p>
 <p>如果有任何疑问，欢迎提 Issue。如果有任何修改建议，欢迎提 Pull Request。</p>
 <h2 id="鸣谢-Thanks">鸣谢 Thanks</h2>
-<p><a target="_blank" rel="noopener" href="https://www.browserstack.com/"><img height="80" src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.browserstack.com/"><img height="80" src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo"><figcaption style="padding-top:5px" class="image-caption">BrowserStack Logo</figcaption></a></p>
 <blockquote>
 <p>感谢 BrowserStack 容许我们在真实的浏览器中测试此项目。<br>
 Thanks to <a target="_blank" rel="noopener" href="https://www.browserstack.com/">BrowserStack</a> for providing the infrastructure that allows us to test in real browsers!</p>
@@ -408,7 +411,7 @@ Live2D Cubism Components は Live2D Open Software License で提供していま�
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -441,8 +444,31 @@ Live2D Cubism Components は Live2D Open Software License で提供していま�
   
 
   <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.css" integrity="sha256-+oItviPaTmqjDhk4y4fLLUIMgRQYDV/ZyrRNvQiebWM=" crossorigin="anonymous">
+  <script class="next-config" data-name="katex" type="application/json">{"copy_tex_js":{"url":"https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/copy-tex.min.js","integrity":"sha256-etSqbSVF4+Lwe8MGk/Vanc1sR+mWv+qOG73fxWw9p94="}}</script>
+  <script src="/js/third-party/math/katex.js"></script>
 
 
+<script src="/plugins/darkmode-js/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#222',
+  buttonColorLight: '#222',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: false
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
 
 </body>
 </html>

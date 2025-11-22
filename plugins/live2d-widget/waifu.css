@@ -69,7 +69,8 @@
 }
 
 #waifu-tips span {
-	color: #0099cc;
+	/* color: #0099cc; */
+	color: #fc6423;
 }
 
 #live2d {
